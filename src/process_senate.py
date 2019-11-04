@@ -144,34 +144,29 @@ for fname in data_files:
             print("ERROR! Party", pbase, "doesn't match", pcheck, "at index", pi)
             sys.exit(1)
 
-    curr_row = 2
-    with tqdm(total=county_data.max_row-curr_row) as progress:
-        while curr_row < county_data.max_row:
-            progress.update(1)
-            county = {}
-            county_name = county_data.cell(row=curr_row, column=1).value
-            if county_name == None:
-                curr_row += 1
-                continue
-            county_state = county_data.cell(row=curr_row, column=2).value
-            if county_state == "T":
-                curr_row += 1
-                continue
-
-            county["_year"] = year
-            county["_state"] = county_state
-            county["_name"] = county_name
-            county["_fips"] = county_data.cell(row=curr_row, column=fips_column).value
-
-            for pi in range(len(parties)):
-                vote_count = county_data.cell(row=curr_row, column=party_col + pi).value
-                if vote_count == None:
-                    vote_count = 0
-                county[parties[pi+1]] = vote_count
-
-            county_votes.append(county)
+    for row in county_data.iter_rows(min_row=2):
+        county = {}
+        county_name = row[1].value
+        if county_name == None:
             curr_row += 1
+            continue
+        county_state = row[2].value
+        if county_state == "T":
+            curr_row += 1
+            continue
 
+        county["_year"] = year
+        county["_state"] = county_state
+        county["_name"] = county_name
+        county["_fips"] = row[fips_column].value
+
+        for pi in range(len(parties)):
+            vote_count = row[party_col + pi].value
+            if vote_count == None:
+                vote_count = 0
+            county[parties[pi+1]] = vote_count
+
+        county_votes.append(county)
 
 
 candidate_wb = Workbook()
