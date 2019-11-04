@@ -146,11 +146,11 @@ for fname in data_files:
 
     for row in county_data.iter_rows(min_row=2):
         county = {}
-        county_name = row[1].value
+        county_name = row[0].value
         if county_name == None:
             curr_row += 1
             continue
-        county_state = row[2].value
+        county_state = row[1].value
         if county_state == "T":
             curr_row += 1
             continue
@@ -158,10 +158,10 @@ for fname in data_files:
         county["_year"] = year
         county["_state"] = county_state
         county["_name"] = county_name
-        county["_fips"] = row[fips_column].value
+        county["_fips"] = row[fips_column-1].value
 
         for pi in range(len(parties)):
-            vote_count = row[party_col + pi].value
+            vote_count = row[party_col-1 + pi].value
             if vote_count == None:
                 vote_count = 0
             county[parties[pi+1]] = vote_count
