@@ -1,2 +1,4 @@
 env/*
 data/*
+
+!data/data_description.txt
