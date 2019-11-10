@@ -4,6 +4,8 @@ cd "$(dirname "$0")"
 
 PYTHON="../env/bin/python"
 
+$PYTHON ./process_unemployment.py
+
 $PYTHON ./process_senate.py
 
 $PYTHON ./convert_governors.py
