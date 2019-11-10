@@ -13,3 +13,6 @@ $PYTHON ./process_governors.py
 
 $PYTHON ./convert_presidents.py
 $PYTHON ./process_presidents.py
+
+
+$PYTHON ./assemble_senate.py

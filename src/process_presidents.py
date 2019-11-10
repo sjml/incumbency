@@ -193,7 +193,7 @@ for fname in data_files:
         for cname, cdata in year_candidates.items():
             party_name = cdata["National Party"]
             vote_count = curr_row[candidate_col + cdata["_idx"]].value
-            if vote_count == None:
+            if vote_count == None or len(str(vote_count).strip()) == 0:
                 vote_count = 0
             county[party_name] = vote_count
 

@@ -162,7 +162,7 @@ for fname in data_files:
 
         for pi in range(len(parties)):
             vote_count = row[party_col-1 + pi].value
-            if vote_count == None:
+            if vote_count == None or len(str(vote_count).strip()) == 0:
                 vote_count = 0
             county[parties[pi+1]] = vote_count
 

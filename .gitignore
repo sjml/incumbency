@@ -1,4 +1,7 @@
-env/*
-data/*
+/env/*
+/data/*
+__pycache__/
+*.py[cod]
+*$py.class
 
 !data/data_description.txt
