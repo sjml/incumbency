@@ -7,9 +7,9 @@ from tqdm import tqdm
 import state_lookup
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
-UNEMPLOYMENT_DATA_FILE = "../data/processed/unemployment_rates.xlsx"
-SENATE_CANDIDATES_FILE = "../data/processed/senate_candidates.xlsx"
-SENATE_VOTING_FILE = "../data/processed/senate_voting.xlsx"
+UNEMPLOYMENT_DATA_FILE = "../data/interim/unemployment_rates.xlsx"
+SENATE_CANDIDATES_FILE = "../data/interim/senate_candidates.xlsx"
+SENATE_VOTING_FILE = "../data/interim/senate_voting.xlsx"
 SENATE_OUTPUT_FILE = "../data/processed/senate_data.xlsx"
 
 # year -> fips -> (unemployment_data)
@@ -29,11 +29,14 @@ for row in unemployment_ws.iter_rows(min_row=2):
     employed = row[unemployment_headers["Employed"]].value
     unemployed = row[unemployment_headers["Unemployed"]].value
     unemployment_rate = row[unemployment_headers["Unemployment Rate"]].value
+    unemployment_deltas = {}
+    for offset in range(1, 11):
+        unemployment_deltas[offset] = row[unemployment_headers["Unemployment Delta_%d" % offset]].value
 
     if year not in unemployment.keys():
         unemployment[year] = {}
     unemployment[year][fips] = (
-        labor_force, employed, unemployed, unemployment_rate
+        labor_force, employed, unemployed, unemployment_rate, unemployment_deltas
     )
 unemployment_wb.close()
 
@@ -92,6 +95,8 @@ senate_ws.cell(row=1, column=10, value="Labor Force")
 senate_ws.cell(row=1, column=11, value="Employed")
 senate_ws.cell(row=1, column=12, value="Unemployed")
 senate_ws.cell(row=1, column=13, value="Unemployment Rate")
+for offset in range(1,11):
+    senate_ws.cell(row=1, column=13+offset, value="Unemployment Delta_%d" % offset)
 
 discard_count = 0
 total_count = 0
@@ -140,6 +145,9 @@ for row in senate_voting_ws.iter_rows(min_row=2):
     senate_ws.cell(row=out_row, column=11, value=unemployment_data[1])
     senate_ws.cell(row=out_row, column=12, value=unemployment_data[2])
     senate_ws.cell(row=out_row, column=13, value=unemployment_data[3])
+
+    for offset in range(1,11):
+        senate_ws.cell(row=out_row, column=13+offset, value=unemployment_data[4][offset])
 
     out_row += 1
 

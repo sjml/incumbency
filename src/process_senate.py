@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 SENATE_PATH = "../data/raw/david_leip/Senate Election Data (xls)"
-OUTPUT_PATH = "../data/processed/"
+OUTPUT_PATH = "../data/interim/"
 
 candidates = []
 county_votes = []

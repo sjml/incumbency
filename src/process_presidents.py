@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 GOV_PATH = "../data/interim/president_data/"
-OUTPUT_PATH = "../data/processed/"
+OUTPUT_PATH = "../data/interim/"
 
 candidates = []
 county_votes = []

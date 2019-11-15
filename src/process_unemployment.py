@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 BLS_PATH = "../data/raw/bls_lau"
-OUTPUT_PATH = "../data/processed/"
+OUTPUT_PATH = "../data/interim/"
 
 
 def build():
@@ -49,12 +49,22 @@ def output(unemployment):
     unemployment_wb = Workbook()
     unemployment_ws = unemployment_wb.active
     unemployment_ws.title = "Unemployment Data"
-    unemployment_ws.cell(row=1, column=1, value="Year")
-    unemployment_ws.cell(row=1, column=2, value="FIPS")
-    unemployment_ws.cell(row=1, column=3, value="Labor Force")
-    unemployment_ws.cell(row=1, column=4, value="Employed")
-    unemployment_ws.cell(row=1, column=5, value="Unemployed")
-    unemployment_ws.cell(row=1, column=6, value="Unemployment Rate")
+    unemployment_ws.cell(row=1, column=1,  value="Year")
+    unemployment_ws.cell(row=1, column=2,  value="FIPS")
+    unemployment_ws.cell(row=1, column=3,  value="Labor Force")
+    unemployment_ws.cell(row=1, column=4,  value="Employed")
+    unemployment_ws.cell(row=1, column=5,  value="Unemployed")
+    unemployment_ws.cell(row=1, column=6,  value="Unemployment Rate")
+    unemployment_ws.cell(row=1, column=7,  value="Unemployment Delta_1")
+    unemployment_ws.cell(row=1, column=8,  value="Unemployment Delta_2")
+    unemployment_ws.cell(row=1, column=9,  value="Unemployment Delta_3")
+    unemployment_ws.cell(row=1, column=10, value="Unemployment Delta_4")
+    unemployment_ws.cell(row=1, column=11, value="Unemployment Delta_5")
+    unemployment_ws.cell(row=1, column=12, value="Unemployment Delta_6")
+    unemployment_ws.cell(row=1, column=13, value="Unemployment Delta_7")
+    unemployment_ws.cell(row=1, column=14, value="Unemployment Delta_8")
+    unemployment_ws.cell(row=1, column=15, value="Unemployment Delta_9")
+    unemployment_ws.cell(row=1, column=16, value="Unemployment Delta_10")
 
     county_row = 2
     for year in sorted(unemployment.keys()):
@@ -66,6 +76,14 @@ def output(unemployment):
             unemployment_ws.cell(row=county_row, column=4, value=data[1])
             unemployment_ws.cell(row=county_row, column=5, value=data[2])
             unemployment_ws.cell(row=county_row, column=6, value=data[3])
+
+            for offset in range(1,11):
+                if (year - offset) in unemployment.keys():
+                    if fips_code not in unemployment[(year - offset)]:
+                        continue
+                    old_data = unemployment[(year - offset)][fips_code]
+                    if isinstance(old_data[3], (int, float)) and isinstance(data[3], (int, float)):
+                        unemployment_ws.cell(row=county_row, column=6+offset, value=data[3] - old_data[3])
 
             county_row += 1
 

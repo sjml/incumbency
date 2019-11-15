@@ -10,9 +10,14 @@ The bls_lau subdirectory comes from the
 U.S. Bureau of Labor Statistics.
 https://www.bls.gov/lau/
 
-the david_leip subdirectory is the county-level
+The david_leip subdirectory is the county-level
 data from the Atlas of U.S. Presidential Elections.
 https://uselectionatlas.org/
+
+The market_history subdirectory contains CSV files
+with monthly data from various US stock market indexes
+downloaded from Yahoo! Finance.
+https://finance.yahoo.com/
 
 .
 ├── interim
@@ -48,287 +53,291 @@ https://uselectionatlas.org/
     │   ├── laucnty97.xlsx
     │   ├── laucnty98.xlsx
     │   └── laucnty99.xlsx
-    └── david_leip
-        ├── Gov\ Election\ Data\ (county\ csv)
-        │   ├── 1990_gov_countysheet_v1.csv
-        │   ├── 1991_gov_countysheet_v1.csv
-        │   ├── 1992_gov_countysheet_v1.csv
-        │   ├── 1993_gov_countysheet_v1-0-1.csv
-        │   ├── 1994_gov_countysheet_v1.csv
-        │   ├── 1995_gov_countysheet_v1.csv
-        │   ├── 1996_gov_countysheet_v1.csv
-        │   ├── 1997_gov_countysheet_v1-1.csv
-        │   ├── 1998_gov_countysheet_v1-1.csv
-        │   ├── 1999_gov_countysheet_v1.csv
-        │   ├── 2000_gov_countysheet_v1-1.csv
-        │   ├── 2001_gov_countysheet_v1.csv
-        │   ├── 2002_gov_countysheet_v1-3.csv
-        │   ├── 2003_gov_countysheet_v1.csv
-        │   ├── 2004_gov_countysheet_v1.csv
-        │   ├── 2005_gov_countysheet_v1.csv
-        │   ├── 2006_gov_countysheet_v1-2.csv
-        │   ├── 2007_gov_countysheet_v1.csv
-        │   ├── 2008_gov_countysheet_v1.csv
-        │   ├── 2009_gov_countysheet_v1-1.csv
-        │   ├── 2010_gov_countysheet_v1-1-1.csv
-        │   ├── 2011_gov_countysheet_v1-1.csv
-        │   ├── 2012_gov_countysheet_v1-1.csv
-        │   ├── 2013_gov_countysheet_v1.csv
-        │   ├── 2014_gov_countysheet_v1.csv
-        │   ├── 2015_gov_countysheet_v1.csv
-        │   ├── 2016_gov_countysheet_v1.csv
-        │   ├── 2017_gov_countysheet_v1.csv
-        │   └── 2018_gov_countysheet_v1-1.csv
-        ├── Gov\ Election\ Data\ (state\ csv)
-        │   ├── 1990_gov_statesheet_v1.csv
-        │   ├── 1991_gov_statesheet_v1.csv
-        │   ├── 1992_gov_statesheet_v1.csv
-        │   ├── 1993_gov_statesheet_v1-0-1.csv
-        │   ├── 1994_gov_statesheet_v1.csv
-        │   ├── 1995_gov_statesheet_v1.csv
-        │   ├── 1996_gov_statesheet_v1.csv
-        │   ├── 1997_gov_statesheet_v1-1.csv
-        │   ├── 1998_gov_statesheet_v1-1.csv
-        │   ├── 1999_gov_statesheet_v1.csv
-        │   ├── 2000_gov_statesheet_v1-1.csv
-        │   ├── 2001_gov_statesheet_v1.csv
-        │   ├── 2002_gov_statesheet_v1-3.csv
-        │   ├── 2003_gov_statesheet_v1.csv
-        │   ├── 2004_gov_statesheet_v1.csv
-        │   ├── 2005_gov_statesheet_v1.csv
-        │   ├── 2006_gov_statesheet_v1-2.csv
-        │   ├── 2007_gov_statesheet_v1.csv
-        │   ├── 2008_gov_statesheet_v1.csv
-        │   ├── 2009_gov_statesheet_v1-1.csv
-        │   ├── 2010_gov_statesheet_v1-1-1.csv
-        │   ├── 2011_gov_statesheet_v1-1.csv
-        │   ├── 2012_gov_statesheet_v1-1.csv
-        │   ├── 2013_gov_statesheet_v1.csv
-        │   ├── 2014_gov_statesheet_v1.csv
-        │   ├── 2015_gov_statesheet_v1.csv
-        │   ├── 2016_gov_statesheet_v1.csv
-        │   ├── 2017_gov_statesheet_v1.csv
-        │   └── 2018_gov_statesheet_v1-1.csv
-        ├── Gov\ Election\ Data\ (xls)
-        │   ├── 1990_Gov_Election_Data_v1.xls
-        │   ├── 1990_Gov_Election_Data_v1.xlsx
-        │   ├── 1991_Gov_Election_Data_v1.xls
-        │   ├── 1992_Gov_Election_Data_v1.xls
-        │   ├── 1993_Gov_Election_Data_v1-0-1.xlsx
-        │   ├── 1994_Gov_Election_Data_v1.xls
-        │   ├── 1995_Gov_Election_Data_v1.xls
-        │   ├── 1996_Gov_Election_Data_v1.xls
-        │   ├── 1997_Gov_Election_Data_v1-1.xls
-        │   ├── 1998_Gov_Election_Data_v1-1.xlsx
-        │   ├── 1999_Gov_Election_Data_v1.xls
-        │   ├── 2000_Gov_Election_Data_v1-1.xlsx
-        │   ├── 2001_Gov_Election_Data_v1.xls
-        │   ├── 2002_Gov_Election_Data_v1-3.xlsx
-        │   ├── 2003_Gov_Election_Data_v1.xls
-        │   ├── 2004_Gov_Election_Data_v1.xls
-        │   ├── 2005_Gov_Election_Data_v1.xls
-        │   ├── 2006_Gov_Election_Data_v1-2.xlsx
-        │   ├── 2007_Gov_Election_Data_v1.xls
-        │   ├── 2008_Gov_Election_Data_v1.xls
-        │   ├── 2009_Gov_Election_Data_v1-1.xlsx
-        │   ├── 2010_Gov_Election_Data_v1-1-1.xlsx
-        │   ├── 2011_Gov_Election_Data_v1-1.xlsx
-        │   ├── 2012_Gov_Election_Data_v1-1.xlsx
-        │   ├── 2013_Gov_Election_Data_v1.xlsx
-        │   ├── 2014_Gov_Election_Data_v1.xlsx
-        │   ├── 2015_Gov_Election_Data_v1.xlsx
-        │   ├── 2016_Gov_Election_Data_v1.xlsx
-        │   ├── 2017_Gov_Election_Data_v1.xlsx
-        │   └── 2018_Gov_Election_Data_v1-1.xlsx
-        ├── House\ Election\ Data\ (county\ csv)
-        │   ├── house_countysheet_1992_v0-9.csv
-        │   ├── house_countysheet_1994_v0-9.csv
-        │   ├── house_countysheet_1996_v0-9.csv
-        │   ├── house_countysheet_1998_v0-9.csv
-        │   ├── house_countysheet_2000_v1-2.csv
-        │   ├── house_countysheet_2002_v1-2.csv
-        │   ├── house_countysheet_2004_v1-1.csv
-        │   ├── house_countysheet_2006_v1-1.csv
-        │   ├── house_countysheet_2008_v1-2.csv
-        │   ├── house_countysheet_2010_v1-1.csv
-        │   ├── house_countysheet_2012_v1-3.csv
-        │   ├── house_countysheet_2014_v1-1.csv
-        │   ├── house_countysheet_2016_v1-2.csv
-        │   └── house_countysheet_2018_v1-1.csv
-        ├── House\ Election\ Data\ (district\ csv)
-        │   ├── house_districtsheet_1992_v0-9.csv
-        │   ├── house_districtsheet_1994_v0-9.csv
-        │   ├── house_districtsheet_1996_v0-9.csv
-        │   ├── house_districtsheet_1998_v0-9.csv
-        │   ├── house_districtsheet_2000_v1-2.csv
-        │   ├── house_districtsheet_2002_v1-2.csv
-        │   ├── house_districtsheet_2004_v1-1.csv
-        │   ├── house_districtsheet_2006_v1-1.csv
-        │   ├── house_districtsheet_2008_v1-2.csv
-        │   ├── house_districtsheet_2010_v1-1.csv
-        │   ├── house_districtsheet_2012_v1-3.csv
-        │   ├── house_districtsheet_2014_v1-1.csv
-        │   ├── house_districtsheet_2016_v1-2.csv
-        │   └── house_districtsheet_2018_v1-1.csv
-        ├── House\ Election\ Data\ (state\ csv)
-        │   ├── house_statesheet_1992_v0-9.csv
-        │   ├── house_statesheet_1994_v0-9.csv
-        │   ├── house_statesheet_1996_v0-9.csv
-        │   ├── house_statesheet_1998_v0-9.csv
-        │   ├── house_statesheet_2000_v1-2.csv
-        │   ├── house_statesheet_2002_v1-2.csv
-        │   ├── house_statesheet_2004_v1-1.csv
-        │   ├── house_statesheet_2006_v1-1.csv
-        │   ├── house_statesheet_2008_v1-2.csv
-        │   ├── house_statesheet_2010_v1-1.csv
-        │   ├── house_statesheet_2012_v1-3.csv
-        │   ├── house_statesheet_2014_v1-1.csv
-        │   ├── house_statesheet_2016_v1-2.csv
-        │   └── house_statesheet_2018_v1-1.csv
-        ├── House\ Election\ Data\ (xls)
-        │   ├── House_Election_Data_1992_v0-9.xlsx
-        │   ├── House_Election_Data_1994_v0-9.xlsx
-        │   ├── House_Election_Data_1996_v0-9.xlsx
-        │   ├── House_Election_Data_1998_v0-9.xlsx
-        │   ├── House_Election_Data_2000_v1-2.xlsx
-        │   ├── House_Election_Data_2002_v1-2.xlsx
-        │   ├── House_Election_Data_2004_v1-1.xlsx
-        │   ├── House_Election_Data_2006_v1-1.xlsx
-        │   ├── House_Election_Data_2008_v1-2.xlsx
-        │   ├── House_Election_Data_2010_v1-1.xlsx
-        │   ├── House_Election_Data_2012_v1-3.xlsx
-        │   ├── House_Election_Data_2014_v1-1.xlsx
-        │   ├── House_Election_Data_2016_v1-2.xlsx
-        │   └── House_Election_Data_2018_v1-1.xlsx
-        ├── Pres\ Election\ Data\ (county\ csv)
-        │   ├── 1912_countysheet_v0-81.csv
-        │   ├── 1916_countysheet_v0-81.csv
-        │   ├── 1920_countysheet_v0-8.csv
-        │   ├── 1924_countysheet_v0-8.csv
-        │   ├── 1928_countysheet_v0-8.csv
-        │   ├── 1932_countysheet_v0-8.csv
-        │   ├── 1936_countysheet_v0-8.csv
-        │   ├── 1940_countysheet_v0-9.csv
-        │   ├── 1944_countysheet_v0-9.csv
-        │   ├── 1948_countysheet_v1-1.csv
-        │   ├── 1952_countysheet_v1-0.csv
-        │   ├── 1956_countysheet_v1-0.csv
-        │   ├── 1960_countysheet_v1-1.csv
-        │   ├── 1964_countysheet_v1-0.csv
-        │   ├── 1968_countysheet_v1-0.csv
-        │   ├── 1972_countysheet_v1-0.csv
-        │   ├── 1976_countysheet_v1-0.csv
-        │   ├── 1980_countysheet_v1-0.csv
-        │   ├── 1984_countysheet_v1-0.csv
-        │   ├── 1988_countysheet_v1-0.csv
-        │   ├── 1992_countysheet_v1-2.csv
-        │   ├── 1996_countysheet_v1-2.csv
-        │   ├── 2000_countysheet_v1-3.csv
-        │   ├── 2004_countysheet_v1-2.csv
-        │   ├── 2008_countysheet_v1-1.csv
-        │   ├── 2012_countysheet_v1-4.csv
-        │   └── 2016_countysheet_v1-0.csv
-        ├── Pres\ Election\ Data\ (state\ csv)
-        │   ├── 1912_statesheet_v0-81.csv
-        │   ├── 1916_statesheet_v0-81.csv
-        │   ├── 1920_statesheet_v0-8.csv
-        │   ├── 1924_statesheet_v0-8.csv
-        │   ├── 1928_statesheet_v0-8.csv
-        │   ├── 1932_statesheet_v0-8.csv
-        │   ├── 1936_statesheet_v0-8.csv
-        │   ├── 1940_statesheet_v0-9.csv
-        │   ├── 1944_statesheet_v0-9.csv
-        │   ├── 1948_statesheet_v1-1.csv
-        │   ├── 1952_statesheet_v1-0.csv
-        │   ├── 1956_statesheet_v1-0.csv
-        │   ├── 1960_statesheet_v1-1.csv
-        │   ├── 1964_statesheet_v1-0.csv
-        │   ├── 1968_statesheet_v1-0.csv
-        │   ├── 1972_statesheet_v1-0.csv
-        │   ├── 1976_statesheet_v1-0.csv
-        │   ├── 1980_statesheet_v1-0.csv
-        │   ├── 1984_statesheet_v1-0.csv
-        │   ├── 1988_statesheet_v1-0.csv
-        │   ├── 1992_statesheet_v1-2.csv
-        │   ├── 1996_statesheet_v1-2.csv
-        │   ├── 2000_statesheet_v1-3.csv
-        │   ├── 2004_statesheet_v1-2.csv
-        │   ├── 2008_statesheet_v1-1.csv
-        │   ├── 2012_statesheet_v1-4.csv
-        │   └── 2016_statesheet_v1-0.csv
-        ├── Pres\ Election\ Data\ (xls)
-        │   ├── 1912_Pres_Election_Data_v0-81.xlsx
-        │   ├── 1916_Pres_Election_Data_v0-81.xlsx
-        │   ├── 1920_Pres_Election_Data_v0-8.xlsx
-        │   ├── 1924_Pres_Election_Data_v0-8.xlsx
-        │   ├── 1928_Pres_Election_Data_v0-8.xlsx
-        │   ├── 1932_Pres_Election_Data_v0-8.xlsx
-        │   ├── 1936_Pres_Election_Data_v0-8.xlsx
-        │   ├── 1940_Pres_Election_Data_v0-9.xlsx
-        │   ├── 1944_Pres_Election_Data_v0-9.xlsx
-        │   ├── 1948_Pres_Election_Data_v1-1.xlsx
-        │   ├── 1952_Pres_Election_Data_v1-0.xlsx
-        │   ├── 1956_Pres_Election_Data_v1-0.xlsx
-        │   ├── 1960_Pres_Election_Data_v1-1.xlsx
-        │   ├── 1964_Pres_Election_Data_v1-0.xlsx
-        │   ├── 1968_Pres_Election_Data_v1-0.xls
-        │   ├── 1972_Pres_Election_Data_v1-0.xls
-        │   ├── 1976_Pres_Election_Data_v1-0.xls
-        │   ├── 1980_Pres_Election_Data_v1-0.xlsx
-        │   ├── 1984_Pres_Election_Data_v1-0.xls
-        │   ├── 1988_Pres_Election_Data_v1-0.xls
-        │   ├── 1992_Pres_Election_Data_v1-2.xlsx
-        │   ├── 1996_Pres_Election_Data_v1-2.xlsx
-        │   ├── 2000_Pres_Election_Data_v1-3.xlsx
-        │   ├── 2004_Pres_Election_Data_v1-2.xlsx
-        │   ├── 2008_Pres_Election_Data_v1-1.xlsx
-        │   ├── 2012_Pres_Election_Data_v1-4.xlsx
-        │   └── 2016_Pres_Election_Data_v1-0.xlsx
-        ├── Senate\ Election\ Data\ (county\ csv)
-        │   ├── senate_countysheet_1990_v1-1.csv
-        │   ├── senate_countysheet_1992_v1-1.csv
-        │   ├── senate_countysheet_1994_v1-1.csv
-        │   ├── senate_countysheet_1996_v1-2.csv
-        │   ├── senate_countysheet_1998_v1-1.csv
-        │   ├── senate_countysheet_2000_v1-1.csv
-        │   ├── senate_countysheet_2002_v1-2.csv
-        │   ├── senate_countysheet_2004_v1-2.csv
-        │   ├── senate_countysheet_2006_v1-2.csv
-        │   ├── senate_countysheet_2008_v1-1.csv
-        │   ├── senate_countysheet_2010_v1-1.csv
-        │   ├── senate_countysheet_2012_v1-2.csv
-        │   ├── senate_countysheet_2014_v1-0.csv
-        │   ├── senate_countysheet_2016_v1-2.csv
-        │   └── senate_countysheet_2018_v1-1.csv
-        ├── Senate\ Election\ Data\ (state\ csv)
-        │   ├── senate_statesheet_1990_v1-1.csv
-        │   ├── senate_statesheet_1992_v1-1.csv
-        │   ├── senate_statesheet_1994_v1-1.csv
-        │   ├── senate_statesheet_1996_v1-2.csv
-        │   ├── senate_statesheet_1998_v1-1.csv
-        │   ├── senate_statesheet_2000_v1-1.csv
-        │   ├── senate_statesheet_2002_v1-2.csv
-        │   ├── senate_statesheet_2004_v1-2.csv
-        │   ├── senate_statesheet_2006_v1-2.csv
-        │   ├── senate_statesheet_2008_v1-1.csv
-        │   ├── senate_statesheet_2010_v1-1.csv
-        │   ├── senate_statesheet_2012_v1-2.csv
-        │   ├── senate_statesheet_2014_v1-0.csv
-        │   ├── senate_statesheet_2016_v1-2.csv
-        │   └── senate_statesheet_2018_v1-1.csv
-        └── Senate\ Election\ Data\ (xls)
-            ├── Sen_Election_Data_1990_v1-1.xlsx
-            ├── Sen_Election_Data_1992_v1-1.xlsx
-            ├── Sen_Election_Data_1994_v1-1.xlsx
-            ├── Sen_Election_Data_1996_v1-2.xlsx
-            ├── Sen_Election_Data_1998_v1-1.xlsx
-            ├── Sen_Election_Data_2000_v1-1.xlsx
-            ├── Sen_Election_Data_2002_v1-2.xlsx
-            ├── Sen_Election_Data_2004_v1-2.xlsx
-            ├── Sen_Election_Data_2006_v1-2.xlsx
-            ├── Sen_Election_Data_2008_v1-1.xlsx
-            ├── Sen_Election_Data_2010_v1.1.xlsx
-            ├── Sen_Election_Data_2012_v1-2.xlsx
-            ├── Sen_Election_Data_2014_v1-0.xlsx
-            ├── Sen_Election_Data_2016_v1-2.xlsx
-            └── Sen_Election_Data_2018_v1-1.xlsx
+    ├── david_leip
+    │   ├── Gov\ Election\ Data\ (county\ csv)
+    │   │   ├── 1990_gov_countysheet_v1.csv
+    │   │   ├── 1991_gov_countysheet_v1.csv
+    │   │   ├── 1992_gov_countysheet_v1.csv
+    │   │   ├── 1993_gov_countysheet_v1-0-1.csv
+    │   │   ├── 1994_gov_countysheet_v1.csv
+    │   │   ├── 1995_gov_countysheet_v1.csv
+    │   │   ├── 1996_gov_countysheet_v1.csv
+    │   │   ├── 1997_gov_countysheet_v1-1.csv
+    │   │   ├── 1998_gov_countysheet_v1-1.csv
+    │   │   ├── 1999_gov_countysheet_v1.csv
+    │   │   ├── 2000_gov_countysheet_v1-1.csv
+    │   │   ├── 2001_gov_countysheet_v1.csv
+    │   │   ├── 2002_gov_countysheet_v1-3.csv
+    │   │   ├── 2003_gov_countysheet_v1.csv
+    │   │   ├── 2004_gov_countysheet_v1.csv
+    │   │   ├── 2005_gov_countysheet_v1.csv
+    │   │   ├── 2006_gov_countysheet_v1-2.csv
+    │   │   ├── 2007_gov_countysheet_v1.csv
+    │   │   ├── 2008_gov_countysheet_v1.csv
+    │   │   ├── 2009_gov_countysheet_v1-1.csv
+    │   │   ├── 2010_gov_countysheet_v1-1-1.csv
+    │   │   ├── 2011_gov_countysheet_v1-1.csv
+    │   │   ├── 2012_gov_countysheet_v1-1.csv
+    │   │   ├── 2013_gov_countysheet_v1.csv
+    │   │   ├── 2014_gov_countysheet_v1.csv
+    │   │   ├── 2015_gov_countysheet_v1.csv
+    │   │   ├── 2016_gov_countysheet_v1.csv
+    │   │   ├── 2017_gov_countysheet_v1.csv
+    │   │   └── 2018_gov_countysheet_v1-1.csv
+    │   ├── Gov\ Election\ Data\ (state\ csv)
+    │   │   ├── 1990_gov_statesheet_v1.csv
+    │   │   ├── 1991_gov_statesheet_v1.csv
+    │   │   ├── 1992_gov_statesheet_v1.csv
+    │   │   ├── 1993_gov_statesheet_v1-0-1.csv
+    │   │   ├── 1994_gov_statesheet_v1.csv
+    │   │   ├── 1995_gov_statesheet_v1.csv
+    │   │   ├── 1996_gov_statesheet_v1.csv
+    │   │   ├── 1997_gov_statesheet_v1-1.csv
+    │   │   ├── 1998_gov_statesheet_v1-1.csv
+    │   │   ├── 1999_gov_statesheet_v1.csv
+    │   │   ├── 2000_gov_statesheet_v1-1.csv
+    │   │   ├── 2001_gov_statesheet_v1.csv
+    │   │   ├── 2002_gov_statesheet_v1-3.csv
+    │   │   ├── 2003_gov_statesheet_v1.csv
+    │   │   ├── 2004_gov_statesheet_v1.csv
+    │   │   ├── 2005_gov_statesheet_v1.csv
+    │   │   ├── 2006_gov_statesheet_v1-2.csv
+    │   │   ├── 2007_gov_statesheet_v1.csv
+    │   │   ├── 2008_gov_statesheet_v1.csv
+    │   │   ├── 2009_gov_statesheet_v1-1.csv
+    │   │   ├── 2010_gov_statesheet_v1-1-1.csv
+    │   │   ├── 2011_gov_statesheet_v1-1.csv
+    │   │   ├── 2012_gov_statesheet_v1-1.csv
+    │   │   ├── 2013_gov_statesheet_v1.csv
+    │   │   ├── 2014_gov_statesheet_v1.csv
+    │   │   ├── 2015_gov_statesheet_v1.csv
+    │   │   ├── 2016_gov_statesheet_v1.csv
+    │   │   ├── 2017_gov_statesheet_v1.csv
+    │   │   └── 2018_gov_statesheet_v1-1.csv
+    │   ├── Gov\ Election\ Data\ (xls)
+    │   │   ├── 1990_Gov_Election_Data_v1.xls
+    │   │   ├── 1990_Gov_Election_Data_v1.xlsx
+    │   │   ├── 1991_Gov_Election_Data_v1.xls
+    │   │   ├── 1992_Gov_Election_Data_v1.xls
+    │   │   ├── 1993_Gov_Election_Data_v1-0-1.xlsx
+    │   │   ├── 1994_Gov_Election_Data_v1.xls
+    │   │   ├── 1995_Gov_Election_Data_v1.xls
+    │   │   ├── 1996_Gov_Election_Data_v1.xls
+    │   │   ├── 1997_Gov_Election_Data_v1-1.xls
+    │   │   ├── 1998_Gov_Election_Data_v1-1.xlsx
+    │   │   ├── 1999_Gov_Election_Data_v1.xls
+    │   │   ├── 2000_Gov_Election_Data_v1-1.xlsx
+    │   │   ├── 2001_Gov_Election_Data_v1.xls
+    │   │   ├── 2002_Gov_Election_Data_v1-3.xlsx
+    │   │   ├── 2003_Gov_Election_Data_v1.xls
+    │   │   ├── 2004_Gov_Election_Data_v1.xls
+    │   │   ├── 2005_Gov_Election_Data_v1.xls
+    │   │   ├── 2006_Gov_Election_Data_v1-2.xlsx
+    │   │   ├── 2007_Gov_Election_Data_v1.xls
+    │   │   ├── 2008_Gov_Election_Data_v1.xls
+    │   │   ├── 2009_Gov_Election_Data_v1-1.xlsx
+    │   │   ├── 2010_Gov_Election_Data_v1-1-1.xlsx
+    │   │   ├── 2011_Gov_Election_Data_v1-1.xlsx
+    │   │   ├── 2012_Gov_Election_Data_v1-1.xlsx
+    │   │   ├── 2013_Gov_Election_Data_v1.xlsx
+    │   │   ├── 2014_Gov_Election_Data_v1.xlsx
+    │   │   ├── 2015_Gov_Election_Data_v1.xlsx
+    │   │   ├── 2016_Gov_Election_Data_v1.xlsx
+    │   │   ├── 2017_Gov_Election_Data_v1.xlsx
+    │   │   └── 2018_Gov_Election_Data_v1-1.xlsx
+    │   ├── House\ Election\ Data\ (county\ csv)
+    │   │   ├── house_countysheet_1992_v0-9.csv
+    │   │   ├── house_countysheet_1994_v0-9.csv
+    │   │   ├── house_countysheet_1996_v0-9.csv
+    │   │   ├── house_countysheet_1998_v0-9.csv
+    │   │   ├── house_countysheet_2000_v1-2.csv
+    │   │   ├── house_countysheet_2002_v1-2.csv
+    │   │   ├── house_countysheet_2004_v1-1.csv
+    │   │   ├── house_countysheet_2006_v1-1.csv
+    │   │   ├── house_countysheet_2008_v1-2.csv
+    │   │   ├── house_countysheet_2010_v1-1.csv
+    │   │   ├── house_countysheet_2012_v1-3.csv
+    │   │   ├── house_countysheet_2014_v1-1.csv
+    │   │   ├── house_countysheet_2016_v1-2.csv
+    │   │   └── house_countysheet_2018_v1-1.csv
+    │   ├── House\ Election\ Data\ (district\ csv)
+    │   │   ├── house_districtsheet_1992_v0-9.csv
+    │   │   ├── house_districtsheet_1994_v0-9.csv
+    │   │   ├── house_districtsheet_1996_v0-9.csv
+    │   │   ├── house_districtsheet_1998_v0-9.csv
+    │   │   ├── house_districtsheet_2000_v1-2.csv
+    │   │   ├── house_districtsheet_2002_v1-2.csv
+    │   │   ├── house_districtsheet_2004_v1-1.csv
+    │   │   ├── house_districtsheet_2006_v1-1.csv
+    │   │   ├── house_districtsheet_2008_v1-2.csv
+    │   │   ├── house_districtsheet_2010_v1-1.csv
+    │   │   ├── house_districtsheet_2012_v1-3.csv
+    │   │   ├── house_districtsheet_2014_v1-1.csv
+    │   │   ├── house_districtsheet_2016_v1-2.csv
+    │   │   └── house_districtsheet_2018_v1-1.csv
+    │   ├── House\ Election\ Data\ (state\ csv)
+    │   │   ├── house_statesheet_1992_v0-9.csv
+    │   │   ├── house_statesheet_1994_v0-9.csv
+    │   │   ├── house_statesheet_1996_v0-9.csv
+    │   │   ├── house_statesheet_1998_v0-9.csv
+    │   │   ├── house_statesheet_2000_v1-2.csv
+    │   │   ├── house_statesheet_2002_v1-2.csv
+    │   │   ├── house_statesheet_2004_v1-1.csv
+    │   │   ├── house_statesheet_2006_v1-1.csv
+    │   │   ├── house_statesheet_2008_v1-2.csv
+    │   │   ├── house_statesheet_2010_v1-1.csv
+    │   │   ├── house_statesheet_2012_v1-3.csv
+    │   │   ├── house_statesheet_2014_v1-1.csv
+    │   │   ├── house_statesheet_2016_v1-2.csv
+    │   │   └── house_statesheet_2018_v1-1.csv
+    │   ├── House\ Election\ Data\ (xls)
+    │   │   ├── House_Election_Data_1992_v0-9.xlsx
+    │   │   ├── House_Election_Data_1994_v0-9.xlsx
+    │   │   ├── House_Election_Data_1996_v0-9.xlsx
+    │   │   ├── House_Election_Data_1998_v0-9.xlsx
+    │   │   ├── House_Election_Data_2000_v1-2.xlsx
+    │   │   ├── House_Election_Data_2002_v1-2.xlsx
+    │   │   ├── House_Election_Data_2004_v1-1.xlsx
+    │   │   ├── House_Election_Data_2006_v1-1.xlsx
+    │   │   ├── House_Election_Data_2008_v1-2.xlsx
+    │   │   ├── House_Election_Data_2010_v1-1.xlsx
+    │   │   ├── House_Election_Data_2012_v1-3.xlsx
+    │   │   ├── House_Election_Data_2014_v1-1.xlsx
+    │   │   ├── House_Election_Data_2016_v1-2.xlsx
+    │   │   └── House_Election_Data_2018_v1-1.xlsx
+    │   ├── Pres\ Election\ Data\ (county\ csv)
+    │   │   ├── 1912_countysheet_v0-81.csv
+    │   │   ├── 1916_countysheet_v0-81.csv
+    │   │   ├── 1920_countysheet_v0-8.csv
+    │   │   ├── 1924_countysheet_v0-8.csv
+    │   │   ├── 1928_countysheet_v0-8.csv
+    │   │   ├── 1932_countysheet_v0-8.csv
+    │   │   ├── 1936_countysheet_v0-8.csv
+    │   │   ├── 1940_countysheet_v0-9.csv
+    │   │   ├── 1944_countysheet_v0-9.csv
+    │   │   ├── 1948_countysheet_v1-1.csv
+    │   │   ├── 1952_countysheet_v1-0.csv
+    │   │   ├── 1956_countysheet_v1-0.csv
+    │   │   ├── 1960_countysheet_v1-1.csv
+    │   │   ├── 1964_countysheet_v1-0.csv
+    │   │   ├── 1968_countysheet_v1-0.csv
+    │   │   ├── 1972_countysheet_v1-0.csv
+    │   │   ├── 1976_countysheet_v1-0.csv
+    │   │   ├── 1980_countysheet_v1-0.csv
+    │   │   ├── 1984_countysheet_v1-0.csv
+    │   │   ├── 1988_countysheet_v1-0.csv
+    │   │   ├── 1992_countysheet_v1-2.csv
+    │   │   ├── 1996_countysheet_v1-2.csv
+    │   │   ├── 2000_countysheet_v1-3.csv
+    │   │   ├── 2004_countysheet_v1-2.csv
+    │   │   ├── 2008_countysheet_v1-1.csv
+    │   │   ├── 2012_countysheet_v1-4.csv
+    │   │   └── 2016_countysheet_v1-0.csv
+    │   ├── Pres\ Election\ Data\ (state\ csv)
+    │   │   ├── 1912_statesheet_v0-81.csv
+    │   │   ├── 1916_statesheet_v0-81.csv
+    │   │   ├── 1920_statesheet_v0-8.csv
+    │   │   ├── 1924_statesheet_v0-8.csv
+    │   │   ├── 1928_statesheet_v0-8.csv
+    │   │   ├── 1932_statesheet_v0-8.csv
+    │   │   ├── 1936_statesheet_v0-8.csv
+    │   │   ├── 1940_statesheet_v0-9.csv
+    │   │   ├── 1944_statesheet_v0-9.csv
+    │   │   ├── 1948_statesheet_v1-1.csv
+    │   │   ├── 1952_statesheet_v1-0.csv
+    │   │   ├── 1956_statesheet_v1-0.csv
+    │   │   ├── 1960_statesheet_v1-1.csv
+    │   │   ├── 1964_statesheet_v1-0.csv
+    │   │   ├── 1968_statesheet_v1-0.csv
+    │   │   ├── 1972_statesheet_v1-0.csv
+    │   │   ├── 1976_statesheet_v1-0.csv
+    │   │   ├── 1980_statesheet_v1-0.csv
+    │   │   ├── 1984_statesheet_v1-0.csv
+    │   │   ├── 1988_statesheet_v1-0.csv
+    │   │   ├── 1992_statesheet_v1-2.csv
+    │   │   ├── 1996_statesheet_v1-2.csv
+    │   │   ├── 2000_statesheet_v1-3.csv
+    │   │   ├── 2004_statesheet_v1-2.csv
+    │   │   ├── 2008_statesheet_v1-1.csv
+    │   │   ├── 2012_statesheet_v1-4.csv
+    │   │   └── 2016_statesheet_v1-0.csv
+    │   ├── Pres\ Election\ Data\ (xls)
+    │   │   ├── 1912_Pres_Election_Data_v0-81.xlsx
+    │   │   ├── 1916_Pres_Election_Data_v0-81.xlsx
+    │   │   ├── 1920_Pres_Election_Data_v0-8.xlsx
+    │   │   ├── 1924_Pres_Election_Data_v0-8.xlsx
+    │   │   ├── 1928_Pres_Election_Data_v0-8.xlsx
+    │   │   ├── 1932_Pres_Election_Data_v0-8.xlsx
+    │   │   ├── 1936_Pres_Election_Data_v0-8.xlsx
+    │   │   ├── 1940_Pres_Election_Data_v0-9.xlsx
+    │   │   ├── 1944_Pres_Election_Data_v0-9.xlsx
+    │   │   ├── 1948_Pres_Election_Data_v1-1.xlsx
+    │   │   ├── 1952_Pres_Election_Data_v1-0.xlsx
+    │   │   ├── 1956_Pres_Election_Data_v1-0.xlsx
+    │   │   ├── 1960_Pres_Election_Data_v1-1.xlsx
+    │   │   ├── 1964_Pres_Election_Data_v1-0.xlsx
+    │   │   ├── 1968_Pres_Election_Data_v1-0.xls
+    │   │   ├── 1972_Pres_Election_Data_v1-0.xls
+    │   │   ├── 1976_Pres_Election_Data_v1-0.xls
+    │   │   ├── 1980_Pres_Election_Data_v1-0.xlsx
+    │   │   ├── 1984_Pres_Election_Data_v1-0.xls
+    │   │   ├── 1988_Pres_Election_Data_v1-0.xls
+    │   │   ├── 1992_Pres_Election_Data_v1-2.xlsx
+    │   │   ├── 1996_Pres_Election_Data_v1-2.xlsx
+    │   │   ├── 2000_Pres_Election_Data_v1-3.xlsx
+    │   │   ├── 2004_Pres_Election_Data_v1-2.xlsx
+    │   │   ├── 2008_Pres_Election_Data_v1-1.xlsx
+    │   │   ├── 2012_Pres_Election_Data_v1-4.xlsx
+    │   │   └── 2016_Pres_Election_Data_v1-0.xlsx
+    │   ├── Senate\ Election\ Data\ (county\ csv)
+    │   │   ├── senate_countysheet_1990_v1-1.csv
+    │   │   ├── senate_countysheet_1992_v1-1.csv
+    │   │   ├── senate_countysheet_1994_v1-1.csv
+    │   │   ├── senate_countysheet_1996_v1-2.csv
+    │   │   ├── senate_countysheet_1998_v1-1.csv
+    │   │   ├── senate_countysheet_2000_v1-1.csv
+    │   │   ├── senate_countysheet_2002_v1-2.csv
+    │   │   ├── senate_countysheet_2004_v1-2.csv
+    │   │   ├── senate_countysheet_2006_v1-2.csv
+    │   │   ├── senate_countysheet_2008_v1-1.csv
+    │   │   ├── senate_countysheet_2010_v1-1.csv
+    │   │   ├── senate_countysheet_2012_v1-2.csv
+    │   │   ├── senate_countysheet_2014_v1-0.csv
+    │   │   ├── senate_countysheet_2016_v1-2.csv
+    │   │   └── senate_countysheet_2018_v1-1.csv
+    │   ├── Senate\ Election\ Data\ (state\ csv)
+    │   │   ├── senate_statesheet_1990_v1-1.csv
+    │   │   ├── senate_statesheet_1992_v1-1.csv
+    │   │   ├── senate_statesheet_1994_v1-1.csv
+    │   │   ├── senate_statesheet_1996_v1-2.csv
+    │   │   ├── senate_statesheet_1998_v1-1.csv
+    │   │   ├── senate_statesheet_2000_v1-1.csv
+    │   │   ├── senate_statesheet_2002_v1-2.csv
+    │   │   ├── senate_statesheet_2004_v1-2.csv
+    │   │   ├── senate_statesheet_2006_v1-2.csv
+    │   │   ├── senate_statesheet_2008_v1-1.csv
+    │   │   ├── senate_statesheet_2010_v1-1.csv
+    │   │   ├── senate_statesheet_2012_v1-2.csv
+    │   │   ├── senate_statesheet_2014_v1-0.csv
+    │   │   ├── senate_statesheet_2016_v1-2.csv
+    │   │   └── senate_statesheet_2018_v1-1.csv
+    │   └── Senate\ Election\ Data\ (xls)
+    │       ├── Sen_Election_Data_1990_v1-1.xlsx
+    │       ├── Sen_Election_Data_1992_v1-1.xlsx
+    │       ├── Sen_Election_Data_1994_v1-1.xlsx
+    │       ├── Sen_Election_Data_1996_v1-2.xlsx
+    │       ├── Sen_Election_Data_1998_v1-1.xlsx
+    │       ├── Sen_Election_Data_2000_v1-1.xlsx
+    │       ├── Sen_Election_Data_2002_v1-2.xlsx
+    │       ├── Sen_Election_Data_2004_v1-2.xlsx
+    │       ├── Sen_Election_Data_2006_v1-2.xlsx
+    │       ├── Sen_Election_Data_2008_v1-1.xlsx
+    │       ├── Sen_Election_Data_2010_v1.1.xlsx
+    │       ├── Sen_Election_Data_2012_v1-2.xlsx
+    │       ├── Sen_Election_Data_2014_v1-0.xlsx
+    │       ├── Sen_Election_Data_2016_v1-2.xlsx
+    │       └── Sen_Election_Data_2018_v1-1.xlsx
+    └── market_history
+        ├── ^DJI.csv
+        ├── ^GSPC.csv
+        └── ^IXIC.csv
