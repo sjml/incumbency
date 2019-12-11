@@ -114,7 +114,7 @@ senate_ws.cell(row=1, column=12, value="Employed")
 senate_ws.cell(row=1, column=13, value="Unemployed")
 senate_ws.cell(row=1, column=14, value="Unemployment Rate")
 curr_col = 15
-for _ in range(10):
+for offset in range(1, 11):
     senate_ws.cell(row=1, column=curr_col, value="Unemployment Delta_%d" % offset)
     curr_col += 1
 for market_index_info in market_history_headers:
@@ -172,7 +172,7 @@ for row in senate_voting_ws.iter_rows(min_row=2):
     senate_ws.cell(row=out_row, column=14, value=unemployment_data[3])
 
     curr_col = 15
-    for _ in range(10):
+    for offset in range(1, 11):
         senate_ws.cell(row=out_row, column=curr_col, value=unemployment_data[4][offset])
         curr_col += 1
     market_data = market_history[year]
