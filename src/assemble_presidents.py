@@ -4,6 +4,8 @@ import sys
 from openpyxl import Workbook, load_workbook
 from tqdm import tqdm
 
+import state_lookup
+
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 MARKET_HISTORY_DATA_FILE = "../data/interim/market_history.xlsx"
 GDP_GROWTH_DATA_FILE = "../data/interim/gdp.xlsx"
@@ -127,16 +129,19 @@ for row in president_voting_ws.iter_rows(min_row=2):
     if fips == None:
         continue
     fips = int(fips)
+    state = row[president_voting_headers["State"]].value
 
     try:
         unemployment_data = unemployment[year][fips]
     except KeyError:
+        print("missing?", year, fips)
+        # sys.exit(1)
         discard_count += 1
         continue
 
     president_ws.cell(row=out_row, column=1, value=year)
     president_ws.cell(row=out_row, column=2, value=fips)
-    # president_ws.cell(row=out_row, column=3, value=state)
+    president_ws.cell(row=out_row, column=3, value=state)
     president_ws.cell(row=out_row, column=4, value=row[president_voting_headers["County Name"]].value)
 
     incumbent_data = president_elections[year]

@@ -3,5 +3,14 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
 !data/data_description.txt
+
+reports/images/*
+
+
+.Rhistory
+.Rproj.user
+*.utf8.md
+*.knit.md
+
+!/**/.gitkeep
