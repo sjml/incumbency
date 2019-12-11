@@ -17,3 +17,5 @@ $PYTHON ./convert_presidents.py
 $PYTHON ./process_presidents.py
 
 $PYTHON ./assemble_senate.py
+$PYTHON ./assemble_governors.py
+$PYTHON ./assemble_presidents.py
