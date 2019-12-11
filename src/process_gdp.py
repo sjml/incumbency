@@ -17,17 +17,17 @@ GDP_FILE = "API_NY.GDP.MKTP.KD.ZG_DS2_en_excel_v2_422103.xls"
 OUTPUT_FILE = "gdp.xlsx"
 
 # requires libreoffice to be installed :-/
-# if not os.path.exists(OUTPUT_PATH):
-#     os.makedirs(OUTPUT_PATH)
-# subprocess.run([
-#     "soffice",
-#     "--headless",
-#     "--convert-to",
-#     "xlsx",
-#     os.path.join(GDP_PATH, GDP_FILE),
-#     "--outdir",
-#     OUTPUT_PATH
-# ])
+if not os.path.exists(OUTPUT_PATH):
+    os.makedirs(OUTPUT_PATH)
+subprocess.run([
+    "soffice",
+    "--headless",
+    "--convert-to",
+    "xlsx",
+    os.path.join(GDP_PATH, GDP_FILE),
+    "--outdir",
+    OUTPUT_PATH
+])
 
 fpath = os.path.join(OUTPUT_PATH, GDP_FILE) + "x"
 wb = load_workbook(filename=fpath, data_only=True)
