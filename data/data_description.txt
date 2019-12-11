@@ -19,6 +19,10 @@ with monthly data from various US stock market indexes
 downloaded from Yahoo! Finance.
 https://finance.yahoo.com/
 
+The world_bank subdirectory contains an Excel file called
+documenting GDP growth data for hundreds of countries.
+https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG
+
 .
 ├── interim
 ├── processed
@@ -337,7 +341,9 @@ https://finance.yahoo.com/
     │       ├── Sen_Election_Data_2014_v1-0.xlsx
     │       ├── Sen_Election_Data_2016_v1-2.xlsx
     │       └── Sen_Election_Data_2018_v1-1.xlsx
-    └── market_history
-        ├── ^DJI.csv
-        ├── ^GSPC.csv
-        └── ^IXIC.csv
+    ├── market_history
+    │   ├── ^DJI.csv
+    │   ├── ^GSPC.csv
+    │   └── ^IXIC.csv
+    └── world_bank
+        └── API_NY.GDP.MKTP.KD.ZG_DS2_en_excel_v2_422103.xls
