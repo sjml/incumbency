@@ -7,10 +7,27 @@ from tqdm import tqdm
 import state_lookup
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
+MARKET_HISTORY_DATA_FILE = "../data/interim/market_history.xlsx"
+GDP_GROWTH_DATA_FILE = "../data/interim/gdp.xlsx"
 UNEMPLOYMENT_DATA_FILE = "../data/interim/unemployment_rates.xlsx"
 SENATE_CANDIDATES_FILE = "../data/interim/senate_candidates.xlsx"
 SENATE_VOTING_FILE = "../data/interim/senate_voting.xlsx"
 SENATE_OUTPUT_FILE = "../data/processed/senate_data.xlsx"
+
+market_history = {}
+market_history_wb = load_workbook(filename=MARKET_HISTORY_DATA_FILE, data_only=True)
+market_history_ws = market_history_wb.active
+market_history_headers = [x.value for x in market_history_ws[1][1:]]
+for row in market_history_ws.iter_rows(min_row=2):
+    year = int(row[0].value)
+    market_history[year] = [x.value for x in row[1:]]
+
+gdp_growth = {}
+gdp_growth_wb = load_workbook(filename=GDP_GROWTH_DATA_FILE, data_only=True)
+gdp_growth_ws = gdp_growth_wb.active
+for row in gdp_growth_ws.iter_rows(min_row=2):
+    year = int(row[0].value)
+    gdp_growth[year] = row[1].value
 
 # year -> fips -> (unemployment_data)
 unemployment = {}
@@ -91,12 +108,18 @@ senate_ws.cell(row=1, column=6, value="Incumbent Party")
 senate_ws.cell(row=1, column=7, value="Incumbency Code")
 senate_ws.cell(row=1, column=8, value="Votes For Incumbent")
 senate_ws.cell(row=1, column=9, value="Votes Against Incumbent")
-senate_ws.cell(row=1, column=10, value="Labor Force")
-senate_ws.cell(row=1, column=11, value="Employed")
-senate_ws.cell(row=1, column=12, value="Unemployed")
-senate_ws.cell(row=1, column=13, value="Unemployment Rate")
-for offset in range(1,11):
-    senate_ws.cell(row=1, column=13+offset, value="Unemployment Delta_%d" % offset)
+senate_ws.cell(row=1, column=10, value="GDP Growth")
+senate_ws.cell(row=1, column=11, value="Labor Force")
+senate_ws.cell(row=1, column=12, value="Employed")
+senate_ws.cell(row=1, column=13, value="Unemployed")
+senate_ws.cell(row=1, column=14, value="Unemployment Rate")
+curr_col = 15
+for _ in range(10):
+    senate_ws.cell(row=1, column=curr_col, value="Unemployment Delta_%d" % offset)
+    curr_col += 1
+for market_index_info in market_history_headers:
+    senate_ws.cell(row=1, column=curr_col, value=market_index_info)
+    curr_col += 1
 
 discard_count = 0
 total_count = 0
@@ -141,13 +164,21 @@ for row in senate_voting_ws.iter_rows(min_row=2):
     senate_ws.cell(row=out_row, column=8, value=inc_votes)
     senate_ws.cell(row=out_row, column=9, value=opp_votes)
 
-    senate_ws.cell(row=out_row, column=10, value=unemployment_data[0])
-    senate_ws.cell(row=out_row, column=11, value=unemployment_data[1])
-    senate_ws.cell(row=out_row, column=12, value=unemployment_data[2])
-    senate_ws.cell(row=out_row, column=13, value=unemployment_data[3])
+    senate_ws.cell(row=out_row, column=10, value=gdp_growth[year])
 
-    for offset in range(1,11):
-        senate_ws.cell(row=out_row, column=13+offset, value=unemployment_data[4][offset])
+    senate_ws.cell(row=out_row, column=11, value=unemployment_data[0])
+    senate_ws.cell(row=out_row, column=12, value=unemployment_data[1])
+    senate_ws.cell(row=out_row, column=13, value=unemployment_data[2])
+    senate_ws.cell(row=out_row, column=14, value=unemployment_data[3])
+
+    curr_col = 15
+    for _ in range(10):
+        senate_ws.cell(row=out_row, column=curr_col, value=unemployment_data[4][offset])
+        curr_col += 1
+    market_data = market_history[year]
+    for datum in market_data:
+        senate_ws.cell(row=out_row, column=curr_col, value=datum)
+        curr_col += 1
 
     out_row += 1
 
