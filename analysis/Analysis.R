@@ -1,4 +1,4 @@
-# I've never really done anythign with R before, but I
+# I've never really done anything with R before, but I
 #   liked the control it gave over graphing output.
 # This is almost certainly non-paradigmatic, inefficient,
 #   and likely even wrong in some places.
