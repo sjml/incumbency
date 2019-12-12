@@ -1,0 +1,34 @@
+
+Call:
+lm(formula = AGAINST ~ SP5003M, data = dem_datums)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-54.212  -8.904   0.057  10.034  35.460 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 61.56914    0.12604   488.5   <2e-16 ***
+SP5003M     -0.13579    0.01202   -11.3   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 13.97 on 12440 degrees of freedom
+Multiple R-squared:  0.01016,	Adjusted R-squared:  0.01008 
+F-statistic: 127.7 on 1 and 12440 DF,  p-value: < 2.2e-16
+
+[1] "p values:"
+ (Intercept)      SP5003M 
+0.000000e+00 1.842165e-29 
+
+	studentized Breusch-Pagan test
+
+data:  modelSP5003MD
+BP = 11.496, df = 1, p-value = 0.0006975
+
+[1] "heteroskedasticity-corrected standard errors:"
+(Intercept)     SP5003M 
+ 0.12643495  0.01016009 
+[1] "heteroskedasticity-corrected p values:"
+ (Intercept)      SP5003M 
+0.000000e+00 1.843532e-40 

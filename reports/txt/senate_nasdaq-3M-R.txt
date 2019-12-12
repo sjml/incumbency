@@ -1,0 +1,34 @@
+
+Call:
+lm(formula = AGAINST ~ NASDAQ3M, data = rep_datums)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-37.344 -10.415  -0.555   9.594  52.889 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 37.920546   0.108712 348.815  < 2e-16 ***
+NASDAQ3M    -0.038010   0.005559  -6.838 8.29e-12 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 14.53 on 17858 degrees of freedom
+Multiple R-squared:  0.002612,	Adjusted R-squared:  0.002556 
+F-statistic: 46.76 on 1 and 17858 DF,  p-value: 8.288e-12
+
+[1] "p values:"
+ (Intercept)     NASDAQ3M 
+0.000000e+00 8.287737e-12 
+
+	studentized Breusch-Pagan test
+
+data:  modelNasdaq3MR
+BP = 0.016793, df = 1, p-value = 0.8969
+
+[1] "heteroskedasticity-corrected standard errors:"
+(Intercept)    NASDAQ3M 
+0.108721244 0.005533687 
+[1] "heteroskedasticity-corrected p values:"
+ (Intercept)     NASDAQ3M 
+0.000000e+00 6.688715e-12 

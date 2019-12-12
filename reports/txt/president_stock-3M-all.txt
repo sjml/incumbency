@@ -1,0 +1,36 @@
+
+Call:
+lm(formula = AGAINST ~ DOW3M + SP5003M + NASDAQ3M, data = datums)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-52.286 -10.235  -0.538  10.287  45.979 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 52.65106    0.10559 498.658  < 2e-16 ***
+DOW3M        2.27838    0.06366  35.788  < 2e-16 ***
+SP5003M     -1.47167    0.06778 -21.712  < 2e-16 ***
+NASDAQ3M    -0.11437    0.01573  -7.269 3.75e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 14.8 on 21770 degrees of freedom
+Multiple R-squared:  0.1667,	Adjusted R-squared:  0.1666 
+F-statistic:  1451 on 3 and 21770 DF,  p-value: < 2.2e-16
+
+[1] "p values:"
+  (Intercept)         DOW3M       SP5003M      NASDAQ3M 
+ 0.000000e+00 1.294896e-272 1.959921e-103  3.750307e-13 
+
+	studentized Breusch-Pagan test
+
+data:  modelStock3MAll
+BP = 35.317, df = 3, p-value = 1.044e-07
+
+[1] "heteroskedasticity-corrected standard errors:"
+(Intercept)       DOW3M     SP5003M    NASDAQ3M 
+ 0.10619059  0.07096707  0.07525204  0.01587572 
+[1] "heteroskedasticity-corrected p values:"
+  (Intercept)         DOW3M       SP5003M      NASDAQ3M 
+ 0.000000e+00 5.315415e-221  1.927017e-84  6.026004e-13 

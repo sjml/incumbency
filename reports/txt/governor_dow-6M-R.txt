@@ -1,0 +1,34 @@
+
+Call:
+lm(formula = AGAINST ~ DOW6M, data = rep_datums)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-38.003 -10.493  -0.668   9.902  49.588 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 42.33462    0.15330 276.148   <2e-16 ***
+DOW6M       -0.16633    0.01724  -9.647   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 14.74 on 9878 degrees of freedom
+Multiple R-squared:  0.009334,	Adjusted R-squared:  0.009233 
+F-statistic: 93.07 on 1 and 9878 DF,  p-value: < 2.2e-16
+
+[1] "p values:"
+ (Intercept)        DOW6M 
+0.000000e+00 6.317327e-22 
+
+	studentized Breusch-Pagan test
+
+data:  modelDow6MR
+BP = 18.418, df = 1, p-value = 1.774e-05
+
+[1] "heteroskedasticity-corrected standard errors:"
+(Intercept)       DOW6M 
+ 0.15137119  0.01756965 
+[1] "heteroskedasticity-corrected p values:"
+ (Intercept)        DOW6M 
+0.000000e+00 3.535782e-21 

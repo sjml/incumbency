@@ -1,0 +1,36 @@
+
+Call:
+lm(formula = AGAINST ~ DOW6M + SP5006M + NASDAQ6M, data = rep_datums)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-37.824 -10.503  -0.835   9.430  55.980 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 42.51293    0.15126 281.065  < 2e-16 ***
+DOW6M       -1.64040    0.07115 -23.056  < 2e-16 ***
+SP5006M      1.73583    0.08276  20.975  < 2e-16 ***
+NASDAQ6M    -0.27465    0.03433  -8.001 1.37e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 14.39 on 9876 degrees of freedom
+Multiple R-squared:  0.05582,	Adjusted R-squared:  0.05553 
+F-statistic: 194.6 on 3 and 9876 DF,  p-value: < 2.2e-16
+
+[1] "p values:"
+  (Intercept)         DOW6M       SP5006M      NASDAQ6M 
+ 0.000000e+00 1.306751e-114  1.334876e-95  1.368173e-15 
+
+	studentized Breusch-Pagan test
+
+data:  modelStock6MR
+BP = 182.44, df = 3, p-value < 2.2e-16
+
+[1] "heteroskedasticity-corrected standard errors:"
+(Intercept)       DOW6M     SP5006M    NASDAQ6M 
+ 0.14595374  0.06902436  0.08189588  0.03279961 
+[1] "heteroskedasticity-corrected p values:"
+  (Intercept)         DOW6M       SP5006M      NASDAQ6M 
+ 0.000000e+00 1.870045e-121  1.530174e-97  6.349985e-17 

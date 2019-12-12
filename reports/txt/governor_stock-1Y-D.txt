@@ -1,0 +1,36 @@
+
+Call:
+lm(formula = AGAINST ~ DOW1Y + SP5001Y + NASDAQ1Y, data = dem_datums)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-49.127  -9.634   0.839  10.265  35.765 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 52.77318    0.18187 290.162   <2e-16 ***
+DOW1Y       -0.10273    0.05719  -1.796   0.0725 .  
+SP5001Y     -0.07069    0.05887  -1.201   0.2299    
+NASDAQ1Y     0.24291    0.02135  11.378   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 14.32 on 8270 degrees of freedom
+Multiple R-squared:  0.03417,	Adjusted R-squared:  0.03382 
+F-statistic: 97.54 on 3 and 8270 DF,  p-value: < 2.2e-16
+
+[1] "p values:"
+ (Intercept)        DOW1Y      SP5001Y     NASDAQ1Y 
+0.000000e+00 7.249920e-02 2.298756e-01 8.958058e-30 
+
+	studentized Breusch-Pagan test
+
+data:  modelStock1YD
+BP = 245.21, df = 3, p-value < 2.2e-16
+
+[1] "heteroskedasticity-corrected standard errors:"
+(Intercept)       DOW1Y     SP5001Y    NASDAQ1Y 
+ 0.18038528  0.05666036  0.05725138  0.02510750 
+[1] "heteroskedasticity-corrected p values:"
+ (Intercept)        DOW1Y      SP5001Y     NASDAQ1Y 
+0.000000e+00 6.986745e-02 2.169713e-01 5.042775e-22 
