@@ -411,6 +411,11 @@ generate_regressions <- function(input_data, data_name) {
       coeffsD[,"Pr(>|t|)"][-1][1]
     )
 
+    output_regression(deltaModelAll, paste("reports/txt/", data_name, "_unemployment-minus-", i, "-all.txt", sep=""))
+    output_regression(deltaModelR, paste("reports/txt/", data_name, "_unemployment-minus-", i, "-R.txt", sep=""))
+    output_regression(deltaModelD, paste("reports/txt/", data_name, "_unemployment-minus-", i, "-D.txt", sep=""))
+
+
 
     pdf(file=paste("reports/images/", data_name, "_unemployment-minus-", i, "-against-all.pdf", sep=""), width=5, height=4)
     hbpA <- hexbinplot(`Percent Against` ~ get(colname), input_data,
