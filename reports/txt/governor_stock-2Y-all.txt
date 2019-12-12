@@ -25,7 +25,7 @@ F-statistic: 55.64 on 3 and 18163 DF,  p-value: < 2.2e-16
 
 	studentized Breusch-Pagan test
 
-data:  modelStock2YAll
+data:  model
 BP = 224.62, df = 3, p-value < 2.2e-16
 
 [1] "heteroskedasticity-corrected standard errors:"

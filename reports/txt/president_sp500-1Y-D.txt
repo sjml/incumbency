@@ -23,7 +23,7 @@ F-statistic: 255.8 on 1 and 12440 DF,  p-value: < 2.2e-16
 
 	studentized Breusch-Pagan test
 
-data:  modelSP5001YD
+data:  model
 BP = 42.171, df = 1, p-value = 8.364e-11
 
 [1] "heteroskedasticity-corrected standard errors:"

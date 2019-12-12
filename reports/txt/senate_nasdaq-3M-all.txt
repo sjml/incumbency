@@ -23,7 +23,7 @@ F-statistic: 27.22 on 1 and 32578 DF,  p-value: 1.829e-07
 
 	studentized Breusch-Pagan test
 
-data:  modelNasdaq3MAll
+data:  model
 BP = 0.30257, df = 1, p-value = 0.5823
 
 [1] "heteroskedasticity-corrected standard errors:"

@@ -23,7 +23,7 @@ F-statistic:  24.7 on 1 and 8272 DF,  p-value: 6.836e-07
 
 	studentized Breusch-Pagan test
 
-data:  modelGrowthD
+data:  model
 BP = 23.283, df = 1, p-value = 1.398e-06
 
 [1] "heteroskedasticity-corrected standard errors:"

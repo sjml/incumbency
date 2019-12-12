@@ -23,7 +23,7 @@ F-statistic: 44.07 on 1 and 9330 DF,  p-value: 3.352e-11
 
 	studentized Breusch-Pagan test
 
-data:  modelDow3MR
+data:  model
 BP = 22.768, df = 1, p-value = 1.828e-06
 
 [1] "heteroskedasticity-corrected standard errors:"
