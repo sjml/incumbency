@@ -486,6 +486,8 @@ generate_regressions <- function(input_data, data_name) {
 }
 
 
+# without specifying the column types, the historical stock changes somehow become logical fields? wtf.
+
 senate_data <- read_excel("data/processed/senate_data.xlsx",
                           col_types = c("numeric", "numeric", "text",
                                         "text", "text", "text", "numeric",
