@@ -3,7 +3,7 @@ processed lives. Unforunately it can't be
 redistributed, and I'm not comfortable even
 leaving the derived data available. The sources
 are listed below along with the directory structure
-that will reproduce the analysis when the script
+that will reproduce the analysis when the scripts
 are run.
 
 The bls_lau subdirectory comes from the
@@ -19,7 +19,7 @@ with monthly data from various US stock market indexes
 downloaded from Yahoo! Finance.
 https://finance.yahoo.com/
 
-The world_bank subdirectory contains an Excel file called
+The world_bank subdirectory contains an Excel file
 documenting GDP growth data for hundreds of countries.
 https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG
 
