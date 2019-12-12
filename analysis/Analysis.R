@@ -1,3 +1,8 @@
+# I've never really done anythign with R before, but I
+#   liked the control it gave over graphing output.
+# This is almost certainly non-paradigmatic, inefficient,
+#   and likely even wrong in some place.
+
 library(R.utils)
 library(readxl)
 library(hexbin)
@@ -46,7 +51,7 @@ generate_regressions <- function(input_data, data_name) {
   capture.output(print(coeftest(modelUnempAll, vcov. = hccm)[,2]), file=outfile, append=TRUE)
   capture.output(print("heteroskedasticity-corrected p values:"), file=outfile, append=TRUE)
   capture.output(print(coeftest(modelUnempAll, vcov. = hccm)[,4]), file=outfile, append=TRUE)
-  
+
   outfile <- paste("reports/txt/", data_name, "_unemployment-R.txt", sep="")
   capture.output(summary(modelUnempR), file=outfile)
   capture.output(print("p values:"), file=outfile, append=TRUE)
@@ -56,7 +61,7 @@ generate_regressions <- function(input_data, data_name) {
   capture.output(print(coeftest(modelUnempR, vcov. = hccm)[,2]), file=outfile, append=TRUE)
   capture.output(print("heteroskedasticity-corrected p values:"), file=outfile, append=TRUE)
   capture.output(print(coeftest(modelUnempR, vcov. = hccm)[,4]), file=outfile, append=TRUE)
-  
+
   outfile <- paste("reports/txt/", data_name, "_unemployment-D.txt", sep="")
   capture.output(summary(modelUnempD), file=outfile)
   capture.output(print("p values:"), file=outfile, append=TRUE)
@@ -66,7 +71,7 @@ generate_regressions <- function(input_data, data_name) {
   capture.output(print(coeftest(modelUnempD, vcov. = hccm)[,2]), file=outfile, append=TRUE)
   capture.output(print("heteroskedasticity-corrected p values:"), file=outfile, append=TRUE)
   capture.output(print(coeftest(modelUnempD, vcov. = hccm)[,4]), file=outfile, append=TRUE)
-  
+
   outfile <- paste("reports/txt/", data_name, "_gdp-all.txt", sep="")
   capture.output(summary(modelGrowthAll), file=outfile)
   capture.output(print("p values:"), file=outfile, append=TRUE)
@@ -76,7 +81,7 @@ generate_regressions <- function(input_data, data_name) {
   capture.output(print(coeftest(modelGrowthAll, vcov. = hccm)[,2]), file=outfile, append=TRUE)
   capture.output(print("heteroskedasticity-corrected p values:"), file=outfile, append=TRUE)
   capture.output(print(coeftest(modelGrowthAll, vcov. = hccm)[,4]), file=outfile, append=TRUE)
-  
+
   outfile <- paste("reports/txt/", data_name, "_gdp-R.txt", sep="")
   capture.output(summary(modelGrowthR), file=outfile)
   capture.output(print("p values:"), file=outfile, append=TRUE)
@@ -86,7 +91,7 @@ generate_regressions <- function(input_data, data_name) {
   capture.output(print(coeftest(modelGrowthR, vcov. = hccm)[,2]), file=outfile, append=TRUE)
   capture.output(print("heteroskedasticity-corrected p values:"), file=outfile, append=TRUE)
   capture.output(print(coeftest(modelGrowthR, vcov. = hccm)[,4]), file=outfile, append=TRUE)
-  
+
   outfile <- paste("reports/txt/", data_name, "_gdp-D.txt", sep="")
   capture.output(summary(modelGrowthD), file=outfile)
   capture.output(print("p values:"), file=outfile, append=TRUE)
@@ -96,7 +101,7 @@ generate_regressions <- function(input_data, data_name) {
   capture.output(print(coeftest(modelGrowthD, vcov. = hccm)[,2]), file=outfile, append=TRUE)
   capture.output(print("heteroskedasticity-corrected p values:"), file=outfile, append=TRUE)
   capture.output(print(coeftest(modelGrowthD, vcov. = hccm)[,4]), file=outfile, append=TRUE)
-  
+
   # Output the datums in word format
   export_summs(modelUnempAll, modelUnempR, modelUnempD,
                model.names = c("All", "Rep", "Dem"),
@@ -192,7 +197,7 @@ generate_regressions <- function(input_data, data_name) {
   print(hbpDR)
   dev.off()
   print(summary(modelUnempR))
-  
+
   pdf(file=paste("reports/images/", data_name, "_gdp_growth-against-D+R.pdf", sep=""), width=5, height=4)
   hbpDR <- hexbinplot(AGAINST~GDP, datums,
              xbins=100,
@@ -219,7 +224,7 @@ generate_regressions <- function(input_data, data_name) {
   unempDeltaListD = list()
   for (i in 1:10) {
     colname <- paste("Unemployment Delta_", i, sep="")
-    
+
     deltaDatums <- data.frame(
       "AGAINST" = input_data$`Percent Against`,
       "UNEMP" = get(colname, input_data),
@@ -228,10 +233,10 @@ generate_regressions <- function(input_data, data_name) {
     deltaDatums <- na.omit(deltaDatums)
     deltaDatums <- deltaDatums[deltaDatums$AGAINST > 0.0,]
     deltaDatums <- deltaDatums[deltaDatums$AGAINST < 100.0,]
-    
+
     rep_deltaDatums <- deltaDatums[deltaDatums$INC == "Republican",]
     dem_deltaDatums <- deltaDatums[deltaDatums$INC == "Democratic" | deltaDatums$INC == "Democrat",]
-    
+
     deltaModelAll <- lm(AGAINST ~ UNEMP, data=deltaDatums)
     coeffsAll <- summary(deltaModelAll)[["coefficients"]]
     unempDeltaListAll[[i]] <- c(
@@ -239,7 +244,7 @@ generate_regressions <- function(input_data, data_name) {
       coeffsAll[,"Estimate"][-1][1],
       coeffsAll[,"Pr(>|t|)"][-1][1]
     )
-    
+
     deltaModelR <- lm(AGAINST ~ UNEMP, data=rep_deltaDatums)
     coeffsR <- summary(deltaModelR)[["coefficients"]]
     unempDeltaListR[[i]] <- c(
@@ -247,7 +252,7 @@ generate_regressions <- function(input_data, data_name) {
       coeffsR[,"Estimate"][-1][1],
       coeffsR[,"Pr(>|t|)"][-1][1]
     )
-    
+
     deltaModelD <- lm(AGAINST ~ UNEMP, data=dem_deltaDatums)
     coeffsD <- summary(deltaModelD)[["coefficients"]]
     unempDeltaListD[[i]] <- c(
@@ -255,8 +260,8 @@ generate_regressions <- function(input_data, data_name) {
       coeffsD[,"Estimate"][-1][1],
       coeffsD[,"Pr(>|t|)"][-1][1]
     )
-    
-    
+
+
     pdf(file=paste("reports/images/", data_name, "_unemployment-minus-", i, "-against-all.pdf", sep=""), width=5, height=4)
     hbpA <- hexbinplot(`Percent Against` ~ get(colname), input_data,
                        xbins=100,
@@ -276,26 +281,26 @@ generate_regressions <- function(input_data, data_name) {
     )
     print(hbpA)
     dev.off()
-    
+
   }
   unempDeltaFrameAll <- do.call("rbind", unempDeltaListAll)
   colnames(unempDeltaFrameAll) <- c("Unemployment Interval", "Coefficient Estimate", "Pr(>|t|)")
   estimatesAll <- unempDeltaFrameAll[,"Coefficient Estimate"]
   pvalsAll <- unempDeltaFrameAll[,"Pr(>|t|)"]
 
-  
+
   unempDeltaFrameR <- do.call("rbind", unempDeltaListR)
   colnames(unempDeltaFrameR) <- c("Unemployment Interval", "Coefficient Estimate", "Pr(>|t|)")
   estimatesR <- unempDeltaFrameR[,"Coefficient Estimate"]
   pvalsR <- unempDeltaFrameR[,"Pr(>|t|)"]
 
-  
+
   unempDeltaFrameD <- do.call("rbind", unempDeltaListD)
   colnames(unempDeltaFrameD) <- c("Unemployment Interval", "Coefficient Estimate", "Pr(>|t|)")
   estimatesD <- unempDeltaFrameD[,"Coefficient Estimate"]
   pvalsD <- unempDeltaFrameD[,"Pr(>|t|)"]
-  
-  
+
+
   pdf(file=paste("reports/images/", data_name, "_unemployment-regression-trends-all.pdf", sep=""), width=5, height=4)
   bp <- barplot(estimatesAll,
                 col=color_all,
@@ -306,7 +311,7 @@ generate_regressions <- function(input_data, data_name) {
   )
   text(bp, par("usr")[3], labels = unempDeltaFrameAll[, 1], adj = c(0.5,1.0), xpd = TRUE, cex=1.0)
   dev.off()
-  
+
   pdf(file=paste("reports/images/", data_name, "_unemployment-regression-trends-R.pdf", sep=""), width=5, height=4)
   bp <- barplot(estimatesR,
                 col=color_rep,
@@ -317,7 +322,7 @@ generate_regressions <- function(input_data, data_name) {
   )
   text(bp, par("usr")[3], labels = unempDeltaFrameR[, 1], adj = c(0.5,1.0), xpd = TRUE, cex=1.0)
   dev.off()
-  
+
   pdf(file=paste("reports/images/", data_name, "_unemployment-regression-trends-D.pdf", sep=""), width=5, height=4)
   bp <- barplot(estimatesD,
                 col=color_dem,
@@ -331,20 +336,20 @@ generate_regressions <- function(input_data, data_name) {
 }
 
 
-senate_data <- read_excel("data/processed/senate_data.xlsx", 
-                          col_types = c("numeric", "numeric", "text", 
-                                        "text", "text", "text", "numeric", 
-                                        "numeric", "numeric", "numeric", 
-                                        "numeric", "numeric", "numeric", 
-                                        "numeric", "numeric", "numeric", 
-                                        "numeric", "numeric", "numeric", 
-                                        "numeric", "numeric", "numeric", 
-                                        "numeric", "numeric", "numeric", 
-                                        "numeric", "numeric", "numeric", 
-                                        "numeric", "numeric", "numeric", 
-                                        "numeric", "numeric", "numeric", 
-                                        "numeric", "numeric", "numeric", 
-                                        "numeric", "numeric", "numeric", 
+senate_data <- read_excel("data/processed/senate_data.xlsx",
+                          col_types = c("numeric", "numeric", "text",
+                                        "text", "text", "text", "numeric",
+                                        "numeric", "numeric", "numeric",
+                                        "numeric", "numeric", "numeric",
+                                        "numeric", "numeric", "numeric",
+                                        "numeric", "numeric", "numeric",
+                                        "numeric", "numeric", "numeric",
+                                        "numeric", "numeric", "numeric",
+                                        "numeric", "numeric", "numeric",
+                                        "numeric", "numeric", "numeric",
+                                        "numeric", "numeric", "numeric",
+                                        "numeric", "numeric", "numeric",
+                                        "numeric", "numeric", "numeric",
                                         "numeric", "numeric"))
 
 governor_data <- read_excel("data/processed/governor_data.xlsx",
