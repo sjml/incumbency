@@ -4,31 +4,32 @@ lm(formula = AGAINST ~ NASDAQ2Y, data = dem_datums)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--58.049  -7.944   0.757   9.481  35.168 
+-56.368  -7.895   0.757   9.450  35.183 
 
 Coefficients:
              Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 67.063473   0.215372  311.38   <2e-16 ***
-NASDAQ2Y    -0.164949   0.005196  -31.75   <2e-16 ***
+(Intercept) 67.388172   0.214393   314.3   <2e-16 ***
+NASDAQ2Y    -0.169647   0.005172   -32.8   <2e-16 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 13.5 on 12440 degrees of freedom
-Multiple R-squared:  0.07494,	Adjusted R-squared:  0.07486 
-F-statistic:  1008 on 1 and 12440 DF,  p-value: < 2.2e-16
+Residual standard error: 13.44 on 12440 degrees of freedom
+Multiple R-squared:  0.07959,	Adjusted R-squared:  0.07952 
+F-statistic:  1076 on 1 and 12440 DF,  p-value: < 2.2e-16
 
 [1] "p values:"
   (Intercept)      NASDAQ2Y 
- 0.000000e+00 9.938898e-213 
+ 0.000000e+00 2.315961e-226 
 
 	studentized Breusch-Pagan test
 
 data:  model
-BP = 336.72, df = 1, p-value < 2.2e-16
+BP = 322.38, df = 1, p-value < 2.2e-16
 
 [1] "heteroskedasticity-corrected standard errors:"
 (Intercept)    NASDAQ2Y 
- 0.23134117  0.00484967 
+0.229805070 0.004828024 
 [1] "heteroskedasticity-corrected p values:"
   (Intercept)      NASDAQ2Y 
- 0.000000e+00 1.533372e-242 
+ 0.000000e+00 5.686789e-258 

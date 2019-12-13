@@ -12,4 +12,4 @@ The output regressions and graphs are all in the [reports directory](./reports/)
 
 To run the Python parts, install the packages from `requirements.txt`, then run the `src/_process.sh` script. This will take all the raw data, do some intermediate steps, and eventually output a nicely formatted spreadsheet. 
 
-The actual analysis is done in R and the file sits in the `analysis` directory. I used RStudio to do all of this, and have no idea how to run it from the command line, how to make sure you have the right libraries installed, etc. Apologies. ¯\\_(ツ)\_/¯ 
+The actual analysis is done in R and the file sits in the [analysis directory](./analysis/). I used RStudio to do all of this, and have no idea how to run it from the command line, how to make sure you have the right libraries installed, etc. Apologies. ¯\\_(ツ)\_/¯ 

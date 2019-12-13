@@ -4,31 +4,32 @@ lm(formula = AGAINST ~ GDP, data = rep_datums)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--37.273  -9.451  -0.011   8.966  50.517 
+-41.771 -10.843   0.873  11.200  49.520 
 
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 42.95847    0.22987 186.878  < 2e-16 ***
-GDP          0.44158    0.07683   5.748 9.33e-09 ***
+(Intercept) 44.15023    0.25237  174.95   <2e-16 ***
+GDP          1.48649    0.08435   17.62   <2e-16 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 13.31 on 9330 degrees of freedom
-Multiple R-squared:  0.003528,	Adjusted R-squared:  0.003421 
-F-statistic: 33.04 on 1 and 9330 DF,  p-value: 9.334e-09
+Residual standard error: 14.61 on 9330 degrees of freedom
+Multiple R-squared:  0.03222,	Adjusted R-squared:  0.03211 
+F-statistic: 310.6 on 1 and 9330 DF,  p-value: < 2.2e-16
 
 [1] "p values:"
  (Intercept)          GDP 
-0.000000e+00 9.334329e-09 
+0.000000e+00 2.063505e-68 
 
 	studentized Breusch-Pagan test
 
 data:  model
-BP = 21.201, df = 1, p-value = 4.136e-06
+BP = 40.648, df = 1, p-value = 1.823e-10
 
 [1] "heteroskedasticity-corrected standard errors:"
 (Intercept)         GDP 
- 0.24104591  0.07896983 
+ 0.23914811  0.08268439 
 [1] "heteroskedasticity-corrected p values:"
  (Intercept)          GDP 
-0.000000e+00 2.310514e-08 
+0.000000e+00 4.554761e-71 

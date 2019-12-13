@@ -4,33 +4,34 @@ lm(formula = AGAINST ~ DOW4Y + SP5004Y + NASDAQ4Y, data = dem_datums)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--60.982  -7.610   0.977   9.290  35.161 
+-59.405  -7.553   0.953   9.209  35.037 
 
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 95.39817    1.21508  78.512  < 2e-16 ***
-DOW4Y       -0.14076    0.01046 -13.453  < 2e-16 ***
-SP5004Y      0.13779    0.03198   4.309 1.66e-05 ***
-NASDAQ4Y    -0.36769    0.02057 -17.876  < 2e-16 ***
+(Intercept) 96.57877    1.20837  79.925  < 2e-16 ***
+DOW4Y       -0.14589    0.01041 -14.021  < 2e-16 ***
+SP5004Y      0.14748    0.03180   4.637 3.57e-06 ***
+NASDAQ4Y    -0.38200    0.02046 -18.675  < 2e-16 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 13.35 on 12438 degrees of freedom
-Multiple R-squared:  0.09666,	Adjusted R-squared:  0.09644 
-F-statistic: 443.6 on 3 and 12438 DF,  p-value: < 2.2e-16
+Residual standard error: 13.27 on 12438 degrees of freedom
+Multiple R-squared:  0.103,	Adjusted R-squared:  0.1027 
+F-statistic: 475.9 on 3 and 12438 DF,  p-value: < 2.2e-16
 
 [1] "p values:"
  (Intercept)        DOW4Y      SP5004Y     NASDAQ4Y 
-0.000000e+00 5.729399e-41 1.655359e-05 1.381078e-70 
+0.000000e+00 2.532802e-44 3.566275e-06 8.863712e-77 
 
 	studentized Breusch-Pagan test
 
 data:  model
-BP = 372.61, df = 3, p-value < 2.2e-16
+BP = 354.53, df = 3, p-value < 2.2e-16
 
 [1] "heteroskedasticity-corrected standard errors:"
 (Intercept)       DOW4Y     SP5004Y    NASDAQ4Y 
-1.316364322 0.009138433 0.032051180 0.023097072 
+1.302310528 0.009119656 0.031961111 0.022938519 
 [1] "heteroskedasticity-corrected p values:"
  (Intercept)        DOW4Y      SP5004Y     NASDAQ4Y 
-0.000000e+00 4.830892e-53 1.728487e-05 1.675973e-56 
+0.000000e+00 4.943620e-57 3.982209e-06 1.327433e-61 

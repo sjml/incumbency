@@ -4,31 +4,32 @@ lm(formula = AGAINST ~ DOW6M, data = rep_datums)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--37.788  -9.426  -0.015   9.065  50.003 
+-41.400 -11.016   0.691  11.477  48.497 
 
 Coefficients:
-             Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 44.322835   0.169369 261.694  < 2e-16 ***
-DOW6M        0.030192   0.009664   3.124  0.00179 ** 
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 49.10397    0.18713  262.41   <2e-16 ***
+DOW6M        0.13714    0.01068   12.84   <2e-16 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 13.33 on 9330 degrees of freedom
-Multiple R-squared:  0.001045,	Adjusted R-squared:  0.0009379 
-F-statistic: 9.759 on 1 and 9330 DF,  p-value: 0.00179
+Residual standard error: 14.73 on 9330 degrees of freedom
+Multiple R-squared:  0.01737,	Adjusted R-squared:  0.01727 
+F-statistic:   165 on 1 and 9330 DF,  p-value: < 2.2e-16
 
 [1] "p values:"
-(Intercept)       DOW6M 
-0.000000000 0.001789508 
+ (Intercept)        DOW6M 
+0.000000e+00 1.929901e-37 
 
 	studentized Breusch-Pagan test
 
 data:  model
-BP = 18.82, df = 1, p-value = 1.437e-05
+BP = 47.631, df = 1, p-value = 5.144e-12
 
 [1] "heteroskedasticity-corrected standard errors:"
 (Intercept)       DOW6M 
-0.166147575 0.009955618 
+ 0.19354909  0.01050519 
 [1] "heteroskedasticity-corrected p values:"
-(Intercept)       DOW6M 
-0.000000000 0.002430945 
+ (Intercept)        DOW6M 
+0.000000e+00 1.297172e-38 

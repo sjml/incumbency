@@ -60,6 +60,7 @@ for fname in data_files:
         continue
 
     year = int(fname[:4])
+    if year < 1990: continue # for brevity in debugging
     if year == 1980:
         print("(Skipping %d president data)" % year)
         continue # missing candidate data from 1980;
@@ -173,6 +174,14 @@ for fname in data_files:
     if fips_column == -1:
         print("ERROR! Couldn't find fips column.")
         sys.exit(1)
+    total_vote_column = -1
+    for i, c in enumerate(county_headers):
+        if c.value == "Total Vote":
+            total_vote_column = i
+            break
+    if total_vote_column == -1:
+        print("ERROR! Couldn't find total vote column.")
+        sys.exit(1)
 
     candidate_col = 13 # starting at N
 
@@ -189,6 +198,7 @@ for fname in data_files:
         county["_state"] = county_state
         county["_name"] = county_name
         county["_fips"] = curr_row[fips_column].value
+        county["_totalVote"] = curr_row[total_vote_column].value
 
         for cname, cdata in year_candidates.items():
             party_name = cdata["National Party"]
@@ -228,8 +238,9 @@ voting_ws.cell(row=1, column=1, value="Year")
 voting_ws.cell(row=1, column=2, value="State")
 voting_ws.cell(row=1, column=3, value="FIPS")
 voting_ws.cell(row=1, column=4, value="County Name")
+voting_ws.cell(row=1, column=5, value="Total Vote")
 
-party_col = 5
+party_col = 6
 for pname, pi in all_parties.items():
     voting_ws.cell(row=1, column=party_col + pi, value=pname)
 
@@ -240,6 +251,8 @@ for county in tqdm(county_votes):
     voting_ws.cell(row=county_row, column=2, value=county["_state"])
     voting_ws.cell(row=county_row, column=3, value=county["_fips"])
     voting_ws.cell(row=county_row, column=4, value=county["_name"])
+    voting_ws.cell(row=county_row, column=5, value=county["_totalVote"])
+
 
     party_list = all_parties.copy()
     for col, val in county.items():

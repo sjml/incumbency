@@ -4,31 +4,32 @@ lm(formula = AGAINST ~ UNEMP, data = deltaDatums)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--50.029 -11.596   0.277  12.107  42.652 
+-49.406 -11.474   0.244  12.031  42.393 
 
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 54.27499    0.12412  437.30   <2e-16 ***
-UNEMP       -0.71638    0.04453  -16.09   <2e-16 ***
+(Intercept) 54.53501    0.12325  442.49   <2e-16 ***
+UNEMP       -0.72738    0.04421  -16.45   <2e-16 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 16.72 on 18662 degrees of freedom
-Multiple R-squared:  0.01368,	Adjusted R-squared:  0.01363 
-F-statistic: 258.9 on 1 and 18662 DF,  p-value: < 2.2e-16
+Residual standard error: 16.61 on 18662 degrees of freedom
+Multiple R-squared:  0.0143,	Adjusted R-squared:  0.01424 
+F-statistic: 270.6 on 1 and 18662 DF,  p-value: < 2.2e-16
 
 [1] "p values:"
-(Intercept)       UNEMP 
-  0.000e+00   7.452e-58 
+ (Intercept)        UNEMP 
+0.000000e+00 2.185632e-60 
 
 	studentized Breusch-Pagan test
 
 data:  model
-BP = 11.157, df = 1, p-value = 0.0008373
+BP = 10.503, df = 1, p-value = 0.001192
 
 [1] "heteroskedasticity-corrected standard errors:"
 (Intercept)       UNEMP 
- 0.12475470  0.04498143 
+ 0.12387974  0.04486044 
 [1] "heteroskedasticity-corrected p values:"
  (Intercept)        UNEMP 
-0.000000e+00 9.862159e-57 
+0.000000e+00 1.007027e-58 

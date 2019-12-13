@@ -4,33 +4,34 @@ lm(formula = AGAINST ~ DOW6M + SP5006M + NASDAQ6M, data = dem_datums)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--60.982  -7.610   0.977   9.290  35.161 
+-59.405  -7.553   0.953   9.209  35.037 
 
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 66.80485    0.23616 282.881  < 2e-16 ***
-DOW6M        0.41195    0.05381   7.655 2.07e-14 ***
-SP5006M     -1.53278    0.06293 -24.357  < 2e-16 ***
-NASDAQ6M     0.75225    0.02191  34.332  < 2e-16 ***
+(Intercept) 67.11236    0.23486 285.761  < 2e-16 ***
+DOW6M        0.43285    0.05352   8.088 6.61e-16 ***
+SP5006M     -1.58715    0.06258 -25.361  < 2e-16 ***
+NASDAQ6M     0.77542    0.02179  35.585  < 2e-16 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 13.35 on 12438 degrees of freedom
-Multiple R-squared:  0.09666,	Adjusted R-squared:  0.09644 
-F-statistic: 443.6 on 3 and 12438 DF,  p-value: < 2.2e-16
+Residual standard error: 13.27 on 12438 degrees of freedom
+Multiple R-squared:  0.103,	Adjusted R-squared:  0.1027 
+F-statistic: 475.9 on 3 and 12438 DF,  p-value: < 2.2e-16
 
 [1] "p values:"
   (Intercept)         DOW6M       SP5006M      NASDAQ6M 
- 0.000000e+00  2.069948e-14 4.760530e-128 7.102821e-247 
+ 0.000000e+00  6.612145e-16 2.162616e-138 3.215462e-264 
 
 	studentized Breusch-Pagan test
 
 data:  model
-BP = 372.61, df = 3, p-value < 2.2e-16
+BP = 354.53, df = 3, p-value < 2.2e-16
 
 [1] "heteroskedasticity-corrected standard errors:"
 (Intercept)       DOW6M     SP5006M    NASDAQ6M 
- 0.24835334  0.05901466  0.07095650  0.02381859 
+ 0.24700697  0.05870279  0.07035776  0.02356312 
 [1] "heteroskedasticity-corrected p values:"
   (Intercept)         DOW6M       SP5006M      NASDAQ6M 
- 0.000000e+00  3.089597e-12 1.261091e-101 1.171532e-210 
+ 0.000000e+00  1.767070e-13 1.803221e-110 8.379380e-228 

@@ -131,6 +131,13 @@ for row in president_voting_ws.iter_rows(min_row=2):
     fips = int(fips)
     state = row[president_voting_headers["State"]].value
 
+    total_votes = row[president_voting_headers["Total Vote"]].value
+    if total_votes == None:
+        discard_count += 1
+        continue
+    else:
+        total_votes = int(total_votes)
+
     try:
         unemployment_data = unemployment[year][fips]
     except KeyError:
@@ -152,17 +159,18 @@ for row in president_voting_ws.iter_rows(min_row=2):
     inc_votes = 0
     opp_votes = 0
     try:
-        for i in range(4, len(row)):
+        for i in range(5, len(row)):
             if president_voting_header_cells[i].value == incumbent_data[1]:
                 inc_votes += int(row[i].value)
             else:
                 opp_votes += int(row[i].value)
     except Exception as exc:
-        print("ERROR!", total_count)
+        print("ERROR!", total_count, year, fips)
         raise exc
 
     president_ws.cell(row=out_row, column=8, value=inc_votes)
-    president_ws.cell(row=out_row, column=9, value=opp_votes)
+    # president_ws.cell(row=out_row, column=9, value=opp_votes)
+    president_ws.cell(row=out_row, column=9, value=total_votes - inc_votes)
 
     president_ws.cell(row=out_row, column=10, value=gdp_growth[year])
 

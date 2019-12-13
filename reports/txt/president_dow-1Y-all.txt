@@ -4,31 +4,32 @@ lm(formula = AGAINST ~ DOW1Y, data = datums)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--47.572 -11.077  -0.354  11.135  46.938 
+-48.326 -10.310   0.475  10.660  46.669 
 
 Coefficients:
              Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 53.189284   0.109704  484.84   <2e-16 ***
-DOW1Y        0.197570   0.005976   33.06   <2e-16 ***
+(Intercept) 54.727271   0.106572   513.5   <2e-16 ***
+DOW1Y        0.233393   0.005805    40.2   <2e-16 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 15.82 on 21772 degrees of freedom
-Multiple R-squared:  0.04781,	Adjusted R-squared:  0.04776 
-F-statistic:  1093 on 1 and 21772 DF,  p-value: < 2.2e-16
+Residual standard error: 15.37 on 21772 degrees of freedom
+Multiple R-squared:  0.06911,	Adjusted R-squared:  0.06907 
+F-statistic:  1616 on 1 and 21772 DF,  p-value: < 2.2e-16
 
 [1] "p values:"
-  (Intercept)         DOW1Y 
- 0.000000e+00 6.203927e-234 
+(Intercept)       DOW1Y 
+          0           0 
 
 	studentized Breusch-Pagan test
 
 data:  model
-BP = 15.043, df = 1, p-value = 0.0001051
+BP = 16.835, df = 1, p-value = 4.078e-05
 
 [1] "heteroskedasticity-corrected standard errors:"
 (Intercept)       DOW1Y 
-0.109839924 0.005165785 
+0.106857586 0.005123422 
 [1] "heteroskedasticity-corrected p values:"
-  (Intercept)         DOW1Y 
- 0.000000e+00 8.245383e-310 
+(Intercept)       DOW1Y 
+          0           0 

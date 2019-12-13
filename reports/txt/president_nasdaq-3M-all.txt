@@ -4,31 +4,32 @@ lm(formula = AGAINST ~ NASDAQ3M, data = datums)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--48.823 -11.118   0.122  11.237  43.003 
+-48.380 -10.541   0.907  11.029  40.954 
 
 Coefficients:
              Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 53.886456   0.112035 480.980  < 2e-16 ***
-NASDAQ3M    -0.015968   0.005136  -3.109  0.00188 ** 
+(Intercept) 55.811816   0.109922 507.740   <2e-16 ***
+NASDAQ3M     0.042265   0.005039   8.388   <2e-16 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 16.21 on 21772 degrees of freedom
-Multiple R-squared:  0.0004438,	Adjusted R-squared:  0.0003979 
-F-statistic: 9.667 on 1 and 21772 DF,  p-value: 0.001878
+Residual standard error: 15.91 on 21772 degrees of freedom
+Multiple R-squared:  0.003221,	Adjusted R-squared:  0.003175 
+F-statistic: 70.36 on 1 and 21772 DF,  p-value: < 2.2e-16
 
 [1] "p values:"
-(Intercept)    NASDAQ3M 
-0.000000000 0.001878418 
+ (Intercept)     NASDAQ3M 
+0.000000e+00 5.243128e-17 
 
 	studentized Breusch-Pagan test
 
 data:  model
-BP = 14.369, df = 1, p-value = 0.0001503
+BP = 5.3333, df = 1, p-value = 0.02092
 
 [1] "heteroskedasticity-corrected standard errors:"
 (Intercept)    NASDAQ3M 
-0.111112083 0.004849104 
+0.109308486 0.004805622 
 [1] "heteroskedasticity-corrected p values:"
- (Intercept)     NASDAQ3M 
-0.0000000000 0.0009931205 
+(Intercept)    NASDAQ3M 
+0.00000e+00 1.53503e-18 

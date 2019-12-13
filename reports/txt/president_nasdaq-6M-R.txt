@@ -4,31 +4,32 @@ lm(formula = AGAINST ~ NASDAQ6M, data = rep_datums)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--36.918  -9.244  -0.110   8.788  51.545 
+-42.014 -10.300   0.931  10.616  51.496 
 
 Coefficients:
              Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 44.512848   0.144228  308.63   <2e-16 ***
-NASDAQ6M     0.067522   0.006068   11.13   <2e-16 ***
+(Intercept) 49.039279   0.155505  315.35   <2e-16 ***
+NASDAQ6M     0.180631   0.006543   27.61   <2e-16 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 13.25 on 9330 degrees of freedom
-Multiple R-squared:  0.0131,	Adjusted R-squared:  0.01299 
-F-statistic: 123.8 on 1 and 9330 DF,  p-value: < 2.2e-16
+Residual standard error: 14.28 on 9330 degrees of freedom
+Multiple R-squared:  0.07552,	Adjusted R-squared:  0.07542 
+F-statistic: 762.1 on 1 and 9330 DF,  p-value: < 2.2e-16
 
 [1] "p values:"
- (Intercept)     NASDAQ6M 
-0.000000e+00 1.406627e-28 
+  (Intercept)      NASDAQ6M 
+ 0.000000e+00 2.473577e-161 
 
 	studentized Breusch-Pagan test
 
 data:  model
-BP = 38.187, df = 1, p-value = 6.429e-10
+BP = 1.4744, df = 1, p-value = 0.2246
 
 [1] "heteroskedasticity-corrected standard errors:"
 (Intercept)    NASDAQ6M 
-0.140664353 0.006188031 
+0.155809857 0.006344918 
 [1] "heteroskedasticity-corrected p values:"
- (Intercept)     NASDAQ6M 
-0.000000e+00 1.485832e-27 
+  (Intercept)      NASDAQ6M 
+ 0.000000e+00 5.058889e-171 

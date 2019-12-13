@@ -4,33 +4,34 @@ lm(formula = AGAINST ~ DOW4Y + SP5004Y + NASDAQ4Y, data = datums)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--54.955  -9.133  -0.263   9.177  51.624 
+-54.582  -8.560   0.157   8.888  51.543 
 
 Coefficients:
              Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 46.143457   0.157102 293.716   <2e-16 ***
-DOW4Y       -0.182924   0.009933 -18.415   <2e-16 ***
-SP5004Y     -0.011897   0.027762  -0.429    0.668    
-NASDAQ4Y     0.277872   0.015941  17.432   <2e-16 ***
+(Intercept) 48.056921   0.150822 318.633  < 2e-16 ***
+DOW4Y       -0.258876   0.009536 -27.146  < 2e-16 ***
+SP5004Y      0.330250   0.026652  12.391  < 2e-16 ***
+NASDAQ4Y     0.085631   0.015303   5.596 2.23e-08 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 13.82 on 21770 degrees of freedom
-Multiple R-squared:  0.2741,	Adjusted R-squared:  0.274 
-F-statistic:  2740 on 3 and 21770 DF,  p-value: < 2.2e-16
+Residual standard error: 13.26 on 21770 degrees of freedom
+Multiple R-squared:  0.3069,	Adjusted R-squared:  0.3068 
+F-statistic:  3214 on 3 and 21770 DF,  p-value: < 2.2e-16
 
 [1] "p values:"
- (Intercept)        DOW4Y      SP5004Y     NASDAQ4Y 
-0.000000e+00 3.699564e-75 6.682710e-01 1.365984e-67 
+  (Intercept)         DOW4Y       SP5004Y      NASDAQ4Y 
+ 0.000000e+00 1.265396e-159  3.830951e-35  2.225635e-08 
 
 	studentized Breusch-Pagan test
 
 data:  model
-BP = 383.86, df = 3, p-value < 2.2e-16
+BP = 466.65, df = 3, p-value < 2.2e-16
 
 [1] "heteroskedasticity-corrected standard errors:"
 (Intercept)       DOW4Y     SP5004Y    NASDAQ4Y 
-0.152667479 0.008904229 0.027968288 0.016440027 
+0.150688047 0.008826641 0.027425445 0.016127019 
 [1] "heteroskedasticity-corrected p values:"
- (Intercept)        DOW4Y      SP5004Y     NASDAQ4Y 
-0.000000e+00 6.691757e-93 6.705771e-01 1.105365e-63 
+  (Intercept)         DOW4Y       SP5004Y      NASDAQ4Y 
+ 0.000000e+00 1.785485e-185  2.735939e-33  1.108211e-07 

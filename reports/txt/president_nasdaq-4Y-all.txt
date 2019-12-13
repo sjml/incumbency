@@ -4,18 +4,19 @@ lm(formula = AGAINST ~ NASDAQ4Y, data = datums)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--51.489  -9.555  -0.622   9.363  52.562 
+-53.366  -8.924  -0.128   9.051  51.513 
 
 Coefficients:
              Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 45.021846   0.142432  316.09   <2e-16 ***
-NASDAQ4Y     0.155734   0.001844   84.44   <2e-16 ***
+(Intercept) 46.306020   0.136953  338.12   <2e-16 ***
+NASDAQ4Y     0.162579   0.001773   91.68   <2e-16 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 14.07 on 21772 degrees of freedom
-Multiple R-squared:  0.2467,	Adjusted R-squared:  0.2467 
-F-statistic:  7131 on 1 and 21772 DF,  p-value: < 2.2e-16
+Residual standard error: 13.53 on 21772 degrees of freedom
+Multiple R-squared:  0.2785,	Adjusted R-squared:  0.2785 
+F-statistic:  8406 on 1 and 21772 DF,  p-value: < 2.2e-16
 
 [1] "p values:"
 (Intercept)    NASDAQ4Y 
@@ -24,11 +25,11 @@ F-statistic:  7131 on 1 and 21772 DF,  p-value: < 2.2e-16
 	studentized Breusch-Pagan test
 
 data:  model
-BP = 2.4059, df = 1, p-value = 0.1209
+BP = 0.24448, df = 1, p-value = 0.621
 
 [1] "heteroskedasticity-corrected standard errors:"
 (Intercept)    NASDAQ4Y 
-0.137840046 0.001760372 
+0.136604226 0.001757039 
 [1] "heteroskedasticity-corrected p values:"
 (Intercept)    NASDAQ4Y 
           0           0 

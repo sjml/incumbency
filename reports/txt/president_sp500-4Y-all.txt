@@ -4,18 +4,19 @@ lm(formula = AGAINST ~ SP5004Y, data = datums)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--49.732  -9.788  -0.716   9.651  52.662 
+-50.821  -9.169  -0.227   9.124  51.859 
 
 Coefficients:
              Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 45.596368   0.142799  319.30   <2e-16 ***
-SP5004Y      0.204809   0.002574   79.56   <2e-16 ***
+(Intercept) 46.752801   0.136813  341.73   <2e-16 ***
+SP5004Y      0.217559   0.002466   88.22   <2e-16 ***
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 14.27 on 21772 degrees of freedom
-Multiple R-squared:  0.2253,	Adjusted R-squared:  0.2252 
-F-statistic:  6330 on 1 and 21772 DF,  p-value: < 2.2e-16
+Residual standard error: 13.67 on 21772 degrees of freedom
+Multiple R-squared:  0.2633,	Adjusted R-squared:  0.2633 
+F-statistic:  7782 on 1 and 21772 DF,  p-value: < 2.2e-16
 
 [1] "p values:"
 (Intercept)     SP5004Y 
@@ -24,11 +25,11 @@ F-statistic:  6330 on 1 and 21772 DF,  p-value: < 2.2e-16
 	studentized Breusch-Pagan test
 
 data:  model
-BP = 0.023118, df = 1, p-value = 0.8791
+BP = 7.6446, df = 1, p-value = 0.005694
 
 [1] "heteroskedasticity-corrected standard errors:"
 (Intercept)     SP5004Y 
-0.138551779 0.002433994 
+0.137574644 0.002430557 
 [1] "heteroskedasticity-corrected p values:"
 (Intercept)     SP5004Y 
           0           0 
