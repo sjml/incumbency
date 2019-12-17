@@ -13,8 +13,7 @@ DOW1Y        0.721349   0.032567  22.150   <2e-16 ***
 SP5001Y     -0.463894   0.035192 -13.182   <2e-16 ***
 NASDAQ1Y     0.008503   0.014978   0.568     0.57    
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 15.29 on 21770 degrees of freedom
 Multiple R-squared:  0.07893,	Adjusted R-squared:  0.0788 

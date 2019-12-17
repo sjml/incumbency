@@ -14,6 +14,7 @@ DOW4Y       -0.05154    0.00463  -11.13   <2e-16 ***
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 15.75 on 18165 degrees of freedom
+  (5847 observations deleted due to missingness)
 Multiple R-squared:  0.006776,	Adjusted R-squared:  0.006721 
 F-statistic: 123.9 on 1 and 18165 DF,  p-value: < 2.2e-16
 

@@ -11,8 +11,7 @@ Coefficients:
 (Intercept) 100.84564    1.18759   84.92   <2e-16 ***
 NASDAQ4Y     -0.42241    0.01271  -33.24   <2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 13.43 on 12440 degrees of freedom
 Multiple R-squared:  0.08158,	Adjusted R-squared:  0.0815 

@@ -11,8 +11,7 @@ Coefficients:
 (Intercept) 44.15023    0.25237  174.95   <2e-16 ***
 GDP          1.48649    0.08435   17.62   <2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14.61 on 9330 degrees of freedom
 Multiple R-squared:  0.03222,	Adjusted R-squared:  0.03211 

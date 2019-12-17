@@ -11,8 +11,7 @@ Coefficients:
 (Intercept) 48.62301    0.15007  324.00   <2e-16 ***
 DOW1Y        0.20753    0.00695   29.86   <2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14.19 on 9330 degrees of freedom
 Multiple R-squared:  0.08724,	Adjusted R-squared:  0.08714 

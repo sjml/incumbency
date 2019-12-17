@@ -14,6 +14,7 @@ NASDAQ4Y    -0.039364   0.003671  -10.72   <2e-16 ***
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14.72 on 9878 degrees of freedom
+  (5847 observations deleted due to missingness)
 Multiple R-squared:  0.01151,	Adjusted R-squared:  0.01141 
 F-statistic:   115 on 1 and 9878 DF,  p-value: < 2.2e-16
 

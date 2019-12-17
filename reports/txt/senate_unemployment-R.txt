@@ -14,6 +14,7 @@ UNEMP        1.38883    0.03836    36.2   <2e-16 ***
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14.04 on 17858 degrees of freedom
+  (8 observations deleted due to missingness)
 Multiple R-squared:  0.06838,	Adjusted R-squared:  0.06833 
 F-statistic:  1311 on 1 and 17858 DF,  p-value: < 2.2e-16
 

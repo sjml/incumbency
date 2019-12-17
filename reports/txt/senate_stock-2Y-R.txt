@@ -16,6 +16,7 @@ NASDAQ2Y     0.008187   0.007697   1.064    0.288
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14.53 on 17856 degrees of freedom
+  (8 observations deleted due to missingness)
 Multiple R-squared:  0.002078,	Adjusted R-squared:  0.001911 
 F-statistic:  12.4 on 3 and 17856 DF,  p-value: 4.278e-08
 

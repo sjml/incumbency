@@ -13,8 +13,7 @@ DOW6M        1.33392    0.04449   29.98   <2e-16 ***
 SP5006M     -1.34132    0.05920  -22.66   <2e-16 ***
 NASDAQ6M     0.47785    0.02305   20.73   <2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 15 on 21770 degrees of freedom
 Multiple R-squared:  0.1143,	Adjusted R-squared:  0.1141 

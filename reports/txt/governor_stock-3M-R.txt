@@ -16,6 +16,7 @@ NASDAQ3M     0.04702    0.03925   1.198    0.231
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14.47 on 9876 degrees of freedom
+  (5847 observations deleted due to missingness)
 Multiple R-squared:  0.04507,	Adjusted R-squared:  0.04478 
 F-statistic: 155.4 on 3 and 9876 DF,  p-value: < 2.2e-16
 

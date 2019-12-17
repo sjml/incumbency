@@ -14,6 +14,7 @@ GDP           0.6468     0.1301    4.97 6.84e-07 ***
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14.55 on 8272 degrees of freedom
+  (5847 observations deleted due to missingness)
 Multiple R-squared:  0.002977,	Adjusted R-squared:  0.002856 
 F-statistic:  24.7 on 1 and 8272 DF,  p-value: 6.836e-07
 

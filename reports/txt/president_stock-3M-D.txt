@@ -13,8 +13,7 @@ DOW3M        1.24816    0.07582   16.46   <2e-16 ***
 SP5003M     -2.42752    0.08631  -28.13   <2e-16 ***
 NASDAQ3M     0.74601    0.02096   35.58   <2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 13.27 on 12438 degrees of freedom
 Multiple R-squared:  0.103,	Adjusted R-squared:  0.1027 

@@ -16,6 +16,7 @@ NASDAQ6M     0.08949    0.02757   3.247  0.00117 **
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 15.76 on 18163 degrees of freedom
+  (5847 observations deleted due to missingness)
 Multiple R-squared:  0.005293,	Adjusted R-squared:  0.005129 
 F-statistic: 32.22 on 3 and 18163 DF,  p-value: < 2.2e-16
 

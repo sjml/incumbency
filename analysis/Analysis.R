@@ -52,7 +52,7 @@ generate_regressions <- function(input_data, data_name) {
     "NASDAQ4Y" = input_data$`Nasdaq-4Y` * 100,
     "INC" = input_data$`Incumbent Party`
   )
-  datums <- na.omit(datums)
+  # datums <- na.omit(datums)
   datums <- datums[datums$AGAINST > 0.0,]
   datums <- datums[datums$AGAINST < 100.0,]
 
@@ -232,13 +232,13 @@ generate_regressions <- function(input_data, data_name) {
 
 
   # Output the datums in word format
-  export_summs(modelUnempAll, modelUnempR, modelUnempD,
-               model.names = c("All", "Rep", "Dem"),
-               to.file="docx", file.name=paste("reports/docs/", data_name, "_unemployment.docx", sep=""))
-
-  export_summs(modelGrowthAll, modelGrowthR, modelGrowthD,
-               model.names = c("All", "Rep", "Dem"),
-               to.file="docx", file.name=paste("reports/docs/", data_name, "_gdp_growth.docx", sep=""))
+  # export_summs(modelUnempAll, modelUnempR, modelUnempD,
+  #              model.names = c("All", "Rep", "Dem"),
+  #              to.file="docx", file.name=paste("reports/docs/", data_name, "_unemployment.docx", sep=""))
+  # 
+  # export_summs(modelGrowthAll, modelGrowthR, modelGrowthD,
+  #              model.names = c("All", "Rep", "Dem"),
+  #              to.file="docx", file.name=paste("reports/docs/", data_name, "_gdp_growth.docx", sep=""))
 
   ## Some kind of output error with the stock models that I don't feel like debugging at the moment.
 

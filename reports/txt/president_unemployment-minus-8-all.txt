@@ -11,8 +11,7 @@ Coefficients:
 (Intercept) 54.59486    0.14141 386.063  < 2e-16 ***
 UNEMP       -0.40860    0.05208  -7.846 4.59e-15 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 17.63 on 15552 degrees of freedom
 Multiple R-squared:  0.003942,	Adjusted R-squared:  0.003878 

@@ -11,8 +11,7 @@ Coefficients:
 (Intercept) 89.07809    0.88452  100.71   <2e-16 ***
 SP5004Y     -0.41917    0.01335  -31.39   <2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 13.49 on 12440 degrees of freedom
 Multiple R-squared:  0.0734,	Adjusted R-squared:  0.07332 

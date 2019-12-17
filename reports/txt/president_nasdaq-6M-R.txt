@@ -11,8 +11,7 @@ Coefficients:
 (Intercept) 49.039279   0.155505  315.35   <2e-16 ***
 NASDAQ6M     0.180631   0.006543   27.61   <2e-16 ***
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14.28 on 9330 degrees of freedom
 Multiple R-squared:  0.07552,	Adjusted R-squared:  0.07542 

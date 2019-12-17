@@ -14,6 +14,7 @@ SP5002Y     -0.062301   0.009023  -6.905 5.33e-12 ***
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14.77 on 9878 degrees of freedom
+  (5847 observations deleted due to missingness)
 Multiple R-squared:  0.004803,	Adjusted R-squared:  0.004703 
 F-statistic: 47.68 on 1 and 9878 DF,  p-value: 5.334e-12
 

@@ -11,8 +11,7 @@ Coefficients:
 (Intercept) 61.555543   0.131900 466.683   <2e-16 ***
 NASDAQ3M    -0.002772   0.006504  -0.426     0.67    
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14.01 on 12440 degrees of freedom
 Multiple R-squared:  1.46e-05,	Adjusted R-squared:  -6.578e-05 

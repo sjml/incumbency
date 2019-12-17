@@ -14,6 +14,7 @@ DOW3M       -0.060317   0.009666   -6.24 4.48e-10 ***
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14.53 on 17858 degrees of freedom
+  (8 observations deleted due to missingness)
 Multiple R-squared:  0.002176,	Adjusted R-squared:  0.00212 
 F-statistic: 38.94 on 1 and 17858 DF,  p-value: 4.475e-10
 

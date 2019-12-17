@@ -14,6 +14,7 @@ SP5003M      0.18700    0.01883    9.93   <2e-16 ***
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 14.74 on 9878 degrees of freedom
+  (5847 observations deleted due to missingness)
 Multiple R-squared:  0.009883,	Adjusted R-squared:  0.009783 
 F-statistic:  98.6 on 1 and 9878 DF,  p-value: < 2.2e-16
 

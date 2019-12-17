@@ -14,6 +14,7 @@ DOW6M        0.08977    0.01318   6.812  9.9e-12 ***
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 15.79 on 18165 degrees of freedom
+  (5847 observations deleted due to missingness)
 Multiple R-squared:  0.002548,	Adjusted R-squared:  0.002493 
 F-statistic: 46.41 on 1 and 18165 DF,  p-value: 9.901e-12
 

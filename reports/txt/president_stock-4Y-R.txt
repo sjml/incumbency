@@ -13,8 +13,7 @@ DOW4Y       -1.51006    0.06868  -21.99   <2e-16 ***
 SP5004Y      1.54106    0.05931   25.98   <2e-16 ***
 NASDAQ4Y          NA         NA      NA       NA    
 ---
-Signif. codes:  
-0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 11.86 on 9329 degrees of freedom
 Multiple R-squared:  0.3628,	Adjusted R-squared:  0.3627 
